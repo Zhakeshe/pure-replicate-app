@@ -1,54 +1,52 @@
+import speakerPhoto from "@/assets/speaker-photo.jpg";
+
 const SpeakerSection = () => {
-  const achievements = [
-    "Автор образовательных бестселлеров",
-    "Хэдлайнер крупнейших конференций по развитию личности и бизнеса",
-    "Более 600 000 человек прошли его программы за 14 лет",
-    "Ведёт один из самых влиятельных блогов о развитии",
-    "Апологет простой, честной и сбалансированной жизни",
+  const benefits = [
+    "3 күн, 2 сағат, 19:00-21:00 Zoom арқылы",
+    "«Кім болуым керек?» деген бейнеден шығып, «мен кіммін?» деген шынайы күйге жақындайтын кеңістік",
+    "Өзіңмен қайта танысатын тәжірибе",
   ];
 
-  const projects = ["«Бизнес Молодость» (2010–2020)", "«Метаморфозы» (2020–2024)"];
-
   return (
-    <section className="py-20 px-6 lg:px-16 bg-muted">
+    <section className="py-16 md:py-20 px-6 lg:px-16 bg-muted">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center animate-fade-in">
+          Тренинг <span className="text-primary">қалай өтеді?</span>
+        </h2>
+
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image */}
-          <div className="relative">
-            <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40">
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 hover:scale-105 transition-transform duration-500">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
-                alt="Пётр Осипов"
-                className="w-full h-full object-cover"
+                src={speakerPhoto}
+                alt="Құлан Мектепберген"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
 
           {/* Content */}
-          <div>
-            <p className="text-muted-foreground mb-2">Автор и методолог воркшопа</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-8">
-              Пётр Осипов
-            </h2>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-muted-foreground mb-2">Автор және методолог</p>
+            <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8">
+              Құлан Мектепберген
+            </h3>
+            <p className="text-muted-foreground mb-2">@kulanman</p>
 
             <ul className="space-y-4 mb-8">
-              {achievements.map((achievement, idx) => (
-                <li key={idx} className="flex items-start gap-3">
+              {benefits.map((benefit, idx) => (
+                <li key={idx} className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: `${idx * 0.1 + 0.3}s` }}>
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span className="text-foreground">{achievement}</span>
+                  <span className="text-foreground text-sm md:text-base">{benefit}</span>
                 </li>
               ))}
             </ul>
 
             <div className="border-t border-border pt-6">
-              <p className="text-muted-foreground mb-3">Основатель проектов:</p>
-              <ul className="space-y-2">
-                {projects.map((project, idx) => (
-                  <li key={idx} className="text-foreground font-medium">
-                    – {project}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-muted-foreground mb-3 text-sm md:text-base">
+                Бұл тренинг - біреудің айтқанын қайталау емес. Өзіңмен қайта танысатын кеңістік.
+              </p>
             </div>
           </div>
         </div>

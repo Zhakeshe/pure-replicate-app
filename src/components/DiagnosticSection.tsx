@@ -1,54 +1,51 @@
-import { Activity, TrendingUp, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const DiagnosticSection = () => {
-  const metrics = [
+  const features = [
     {
-      icon: Activity,
-      title: "Уровень стресса",
-      color: "text-red-500",
+      number: "1",
+      text: "Ішкі күйіңді көрсетеді",
     },
     {
-      icon: TrendingUp,
-      title: "Уровень продуктивности",
-      color: "text-green-500",
+      number: "2",
+      text: "Қай жерде қиындықтар барын анықтайды",
     },
     {
-      icon: Zap,
-      title: "Уровень энергичности",
-      color: "text-yellow-500",
+      number: "3",
+      text: "Кәсіби маманмен жұмыс істеуге дайындық",
     },
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-16 bg-background">
+    <section className="py-16 md:py-20 px-6 lg:px-16 bg-background">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Психологическая диагностика
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 animate-fade-in">
+          P18 тестімен өзіңнің{" "}
+          <span className="text-primary">психо-эмоционалдық</span> жағдайыңды бірден біле аласың
         </h2>
-        <p className="text-muted-foreground mb-12 text-lg">
-          С помощью трекера психоэмоционального состояния вы мгновенно
-          определите:
-        </p>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {metrics.map((metric, idx) => (
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 my-10 md:my-12">
+          {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-2xl p-5 md:p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <div
-                className={`w-12 h-12 rounded-full bg-muted flex items-center justify-center mb-4 mx-auto ${metric.color}`}
-              >
-                <metric.icon className="w-6 h-6" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center mb-4 mx-auto text-primary-foreground font-bold text-lg md:text-xl">
+                {feature.number}
               </div>
-              <h3 className="font-semibold text-foreground">{metric.title}</h3>
+              <p className="text-foreground font-medium text-sm md:text-base">{feature.text}</p>
             </div>
           ))}
         </div>
 
-        <p className="text-muted-foreground">
-          Во время воркшопа вы получите анализ на базе оценки параметров голоса
-        </p>
+        <Button
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
+          style={{ animationDelay: '0.3s' }}
+        >
+          Тест тапсыру
+        </Button>
       </div>
     </section>
   );

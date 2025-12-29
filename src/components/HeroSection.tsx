@@ -10,7 +10,6 @@ import {
 const HeroSection = () => {
   return (
     <section className="min-h-screen relative overflow-hidden font-sans bg-white text-primary">
-      <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_20%_25%,rgba(128,0,16,0.08),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(128,0,16,0.05),transparent_30%),radial-gradient(circle_at_60%_80%,rgba(128,0,16,0.06),transparent_32%)] animate-parallax-soft" />
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}

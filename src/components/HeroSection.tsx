@@ -8,19 +8,19 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden font-sans bg-white text-neutral-900">
+    <section className="min-h-screen relative overflow-hidden font-sans bg-white text-primary">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}
         <div className="relative bg-white">
           {/* Top info bar */}
-          <div className="flex items-center justify-center gap-6 py-4 px-4 text-neutral-800 text-[13px] tracking-wide uppercase">
+          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary text-[13px] tracking-wide uppercase">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-neutral-900 rounded-full" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">20-22 қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-neutral-900 rounded-full" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
@@ -55,34 +55,34 @@ const HeroSection = () => {
         </div>
 
         {/* Content below image */}
-        <div className="bg-white px-6 py-10 space-y-7 text-neutral-900">
-          <p className="text-[15px] leading-7 tracking-[0.01em]">
+        <div className="bg-white px-6 py-10 space-y-7 text-primary">
+          <p className="text-[15px] leading-7 tracking-[0.01em] text-primary">
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
           {/* Diagnostic badge */}
           <div className="flex items-center gap-3 text-[15px] font-medium">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Plus className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-md shadow-primary/30">
+              <Plus className="w-5 h-5 text-primary-foreground drop-shadow" />
             </div>
-            <span className="text-neutral-900">психологиялық диагностика</span>
+            <span className="text-primary font-semibold">психологиялық диагностика</span>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-12 pt-4 text-neutral-900">
+          <div className="flex gap-12 pt-4 text-primary">
             <div>
-              <div className="font-display text-4xl font-bold italic drop-shadow-lg">
+              <div className="font-display text-4xl font-bold italic drop-shadow-lg text-primary">
                 3 күн
               </div>
-              <p className="text-neutral-700 text-sm mt-1 leading-snug">
+              <p className="text-primary/80 text-sm mt-1 leading-snug">
                 тренинг ұзақтығы<br />Құлан Мектепберген
               </p>
             </div>
             <div>
-              <div className="font-display text-4xl font-bold italic drop-shadow-lg">
+              <div className="font-display text-4xl font-bold italic drop-shadow-lg text-primary">
                 18
               </div>
-              <p className="text-neutral-700 text-sm mt-1 leading-snug">
+              <p className="text-primary/80 text-sm mt-1 leading-snug">
                 бағдарламаларды талдаймыз деп
               </p>
             </div>
@@ -109,17 +109,17 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop Layout - 50/50 split */}
-      <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-neutral-900">
+      <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-primary">
         {/* Left side - Content on tinted background */}
-        <div className="flex flex-col justify-center px-12 xl:px-20 py-16 bg-white">
+        <div className="flex flex-col justify-center px-12 xl:px-20 py-16 bg-white text-primary">
           {/* Top info bar */}
-          <div className="flex items-center gap-6 mb-8 text-neutral-800 text-sm tracking-[0.08em] uppercase">
+          <div className="flex items-center gap-6 mb-8 text-primary text-sm tracking-[0.08em] uppercase">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-neutral-900 rounded-full" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">20-22 қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-neutral-900 rounded-full" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
@@ -134,33 +134,33 @@ const HeroSection = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-neutral-800 text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-primary text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
           {/* Diagnostic badge */}
           <div className="flex items-center gap-3 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg">
-              <Plus className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/35">
+              <Plus className="w-5 h-5 text-primary-foreground drop-shadow" />
             </div>
-            <span className="text-neutral-900 font-semibold text-base tracking-[0.01em]">психологиялық диагностика</span>
+            <span className="text-primary font-semibold text-base tracking-[0.01em]">психологиялық диагностика</span>
           </div>
 
           {/* Stats */}
           <div className="flex gap-16 mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div>
-              <div className="font-display text-5xl font-bold italic drop-shadow-lg">
+              <div className="font-display text-5xl font-bold italic drop-shadow-lg text-primary">
                 3 күн
               </div>
-              <p className="text-neutral-700 text-sm mt-2 leading-snug">
+              <p className="text-primary/80 text-sm mt-2 leading-snug">
                 тренинг ұзақтығы<br />Құлан Мектепберген
               </p>
             </div>
             <div>
-              <div className="font-display text-5xl font-bold italic drop-shadow-lg">
+              <div className="font-display text-5xl font-bold italic drop-shadow-lg text-primary">
                 18
               </div>
-              <p className="text-neutral-700 text-sm mt-2 leading-snug">
+              <p className="text-primary/80 text-sm mt-2 leading-snug">
                 бағдарламаларды талдаймыз деп
               </p>
             </div>

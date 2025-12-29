@@ -4,6 +4,7 @@
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
+Primary color: #b40a1b -> hsl(355, 89%, 37%)
 */
 
 @layer base {
@@ -17,74 +18,74 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    /* Burgundy/Maroon primary color */
-    --primary: 345 60% 35%;
+    /* Deep red/burgundy primary color #b40a1b */
+    --primary: 355 89% 37%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 345 20% 95%;
-    --secondary-foreground: 345 60% 35%;
+    --secondary: 355 20% 95%;
+    --secondary-foreground: 355 89% 37%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 345 30% 90%;
-    --accent-foreground: 345 60% 35%;
+    --accent: 355 30% 90%;
+    --accent-foreground: 355 89% 37%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 345 60% 35%;
+    --ring: 355 89% 37%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 25%;
-    --sidebar-primary: 345 60% 35%;
+    --sidebar-primary: 355 89% 37%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 345 20% 95%;
-    --sidebar-accent-foreground: 345 60% 35%;
+    --sidebar-accent: 355 20% 95%;
+    --sidebar-accent-foreground: 355 89% 37%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 345 60% 45%;
+    --sidebar-ring: 355 89% 45%;
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 355 40% 12%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 12%;
+    --card: 355 30% 15%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 10%;
+    --popover: 355 40% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 345 50% 50%;
+    --primary: 355 80% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 18%;
+    --secondary: 355 30% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 18%;
+    --muted: 355 20% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 345 30% 20%;
+    --accent: 355 30% 25%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 345 50% 50%;
-    --sidebar-background: 0 0% 10%;
+    --border: 355 20% 25%;
+    --input: 355 20% 25%;
+    --ring: 355 80% 55%;
+    --sidebar-background: 355 40% 10%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 345 50% 50%;
+    --sidebar-primary: 355 80% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent: 355 30% 18%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 345 50% 55%;
+    --sidebar-border: 355 20% 22%;
+    --sidebar-ring: 355 80% 60%;
   }
 }
 
@@ -95,5 +96,67 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-book-open {
+    animation: bookOpen 1.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bookOpen {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
   }
 }

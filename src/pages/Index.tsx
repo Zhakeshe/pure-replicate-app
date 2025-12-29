@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import GallerySection from "@/components/GallerySection";
 import ParticipantsSection from "@/components/ParticipantsSection";
 import DiagnosticSection from "@/components/DiagnosticSection";
+import ResultsSection from "@/components/ResultsSection";
 import SpeakerSection from "@/components/SpeakerSection";
 import TariffsSection from "@/components/TariffsSection";
 import QuoteSection from "@/components/QuoteSection";
@@ -15,6 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
+      <ResultsSection />
       <GallerySection />
       <ParticipantsSection />
       <DiagnosticSection />

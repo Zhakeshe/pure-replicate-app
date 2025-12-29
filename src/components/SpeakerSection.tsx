@@ -1,4 +1,8 @@
-import { SPEAKER_BACKGROUND_URL, SPEAKER_IMAGE_URL } from "@/lib/constants";
+import {
+  SPEAKER_BACKGROUND_URL,
+  SPEAKER_IMAGE_FALLBACK_URL,
+  SPEAKER_IMAGE_URL,
+} from "@/lib/constants";
 
 const SpeakerSection = () => {
   const benefits = [
@@ -32,6 +36,12 @@ const SpeakerSection = () => {
                   src={SPEAKER_IMAGE_URL}
                   alt="Құлан Мектепберген"
                   className="w-full h-full object-cover object-top"
+                  onError={(event) => {
+                    const img = event.currentTarget;
+                    if (img.dataset.fallbackApplied === "true") return;
+                    img.dataset.fallbackApplied = "true";
+                    img.src = SPEAKER_IMAGE_FALLBACK_URL;
+                  }}
                 />
               </div>
             </div>

@@ -4,6 +4,7 @@ import {
   AUTHENTICITY_LOGO_URL,
   SPEAKER_BACKGROUND_URL,
   SPEAKER_IMAGE_URL,
+  SPEAKER_IMAGE_FALLBACK_URL,
 } from "@/lib/constants";
 
 const HeroSection = () => {
@@ -52,6 +53,12 @@ const HeroSection = () => {
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
               className="relative w-full h-[55vh] object-cover object-top animate-float-soft"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (img.dataset.fallbackApplied === "true") return;
+                img.dataset.fallbackApplied = "true";
+                img.src = SPEAKER_IMAGE_FALLBACK_URL;
+              }}
             />
           </div>
         </div>
@@ -169,6 +176,12 @@ const HeroSection = () => {
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
             className="relative w-full h-full object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] animate-float-soft"
+            onError={(event) => {
+              const img = event.currentTarget;
+              if (img.dataset.fallbackApplied === "true") return;
+              img.dataset.fallbackApplied = "true";
+              img.src = SPEAKER_IMAGE_FALLBACK_URL;
+            }}
           />
         </div>
       </div>

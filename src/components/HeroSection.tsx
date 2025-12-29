@@ -7,30 +7,31 @@ const HeroSection = () => {
     <section className="relative min-h-screen bg-background text-foreground">
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        <div className="relative bg-primary text-primary-foreground pb-10">
-          <div className="flex items-center justify-center gap-4 px-6 pt-4 text-sm tracking-tight uppercase">
+        <div className="relative bg-primary text-primary-foreground pb-12">
+          <div className="flex items-center justify-center gap-5 px-6 pt-5 text-xs font-semibold tracking-[0.16em] uppercase">
             <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground" />
-              <span className="font-semibold">20-22</span>
+              <span className="h-1 w-1 rounded-full bg-primary-foreground" />
+              <span>20-22</span>
               <span className="text-primary-foreground/80">қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground" />
+              <span className="h-1 w-1 rounded-full bg-primary-foreground" />
               <span className="text-primary-foreground/90">онлайн</span>
-              <span className="font-semibold">ZOOM</span>
+              <span>ZOOM</span>
             </div>
           </div>
 
-          <h1 className="px-6 pt-6 text-center font-display text-5xl font-extrabold uppercase tracking-[0.14em] leading-tight">
+          <h1 className="px-6 pt-6 text-center font-display text-[2.8rem] font-extrabold uppercase leading-[1.05] tracking-[0.22em]">
             АУТЕНТИЧНОСТЬ
           </h1>
 
-          <div className="relative mt-6 flex justify-center">
+          <div className="relative mt-6 flex justify-center overflow-hidden rounded-none">
             <div className="absolute inset-0 bg-primary" aria-hidden />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent mix-blend-multiply" aria-hidden />
             <img
               src={speakerPhoto}
               alt="Құлан Мектепберген"
-              className="relative z-10 h-[55vh] w-full max-w-2xl object-contain object-top drop-shadow-[0_24px_40px_rgba(0,0,0,0.35)] mix-blend-multiply"
+              className="relative z-10 h-[56vh] w-full max-w-2xl object-contain object-top drop-shadow-[0_28px_48px_rgba(0,0,0,0.4)]"
             />
           </div>
         </div>
@@ -79,8 +80,8 @@ const HeroSection = () => {
 
       {/* Desktop Layout */}
       <div className="hidden min-h-screen grid-cols-[1.05fr_0.95fr] bg-background lg:grid">
-        <div className="flex flex-col justify-center gap-8 px-12 py-14 xl:px-20">
-          <div className="flex items-center gap-6 text-sm uppercase tracking-[0.12em] text-foreground">
+        <div className="flex flex-col justify-center gap-9 px-14 py-16 xl:px-24">
+          <div className="flex items-center gap-7 text-[0.85rem] font-semibold uppercase tracking-[0.18em] text-foreground">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               <span>
@@ -95,8 +96,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="max-w-xl space-y-6">
-            <h1 className="font-display text-7xl font-extrabold uppercase leading-[0.95] tracking-[0.14em] text-primary xl:text-8xl">
+          <div className="max-w-[560px] space-y-7">
+            <h1 className="font-display text-[4.75rem] font-extrabold uppercase leading-[0.92] tracking-[0.22em] text-primary xl:text-[5.25rem]">
               АУТЕНТИЧНОСТЬ
             </h1>
 
@@ -142,11 +143,12 @@ const HeroSection = () => {
         </div>
 
         <div className="relative flex items-center justify-center bg-primary">
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary via-primary/70 to-transparent" aria-hidden />
+          <div className="absolute inset-0 bg-primary" aria-hidden />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent mix-blend-multiply" aria-hidden />
           <img
             src={speakerPhoto}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="relative z-10 h-[88vh] w-full max-w-[900px] object-contain object-top drop-shadow-[0_32px_52px_rgba(0,0,0,0.35)] mix-blend-multiply"
+            className="relative z-10 h-[88vh] w-full max-w-[880px] object-contain object-top drop-shadow-[0_36px_60px_rgba(0,0,0,0.45)]"
           />
         </div>
       </div>

@@ -111,9 +111,9 @@ const HeroSection = () => {
       {/* Desktop Layout - 50/50 split */}
       <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-primary">
         {/* Left side - Content on tinted background */}
-        <div className="flex flex-col justify-center px-12 xl:px-20 py-16 bg-white text-primary">
+        <div className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-20 bg-white text-primary">
           {/* Top info bar */}
-          <div className="flex items-center gap-6 mb-8 text-primary text-sm tracking-[0.08em] uppercase">
+          <div className="flex items-center gap-7 mb-10 text-primary text-sm tracking-[0.08em] uppercase">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">20-22 қаңтар</span>
@@ -129,17 +129,20 @@ const HeroSection = () => {
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-14 w-auto xl:h-16 drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]"
+              className="h-20 w-auto xl:h-24 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
             />
           </h1>
 
           {/* Description */}
-          <p className="text-primary text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p
+            className="text-primary text-2xl leading-relaxed mb-10 max-w-xl animate-fade-in"
+            style={{ animationDelay: '0.1s' }}
+          >
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
           {/* Diagnostic badge */}
-          <div className="flex items-center gap-3 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="flex items-center gap-3 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/35">
               <Plus className="w-5 h-5 text-primary-foreground drop-shadow" />
             </div>
@@ -147,30 +150,30 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-16 mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="flex gap-20 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div>
-              <div className="font-display text-5xl font-bold italic drop-shadow-lg text-primary">
+              <div className="font-display text-6xl font-bold italic drop-shadow-xl text-primary">
                 3 күн
               </div>
-              <p className="text-primary/80 text-sm mt-2 leading-snug">
+              <p className="text-primary/80 text-base mt-3 leading-snug">
                 тренинг ұзақтығы<br />Құлан Мектепберген
               </p>
             </div>
             <div>
-              <div className="font-display text-5xl font-bold italic drop-shadow-lg text-primary">
+              <div className="font-display text-6xl font-bold italic drop-shadow-xl text-primary">
                 18
               </div>
-              <p className="text-primary/80 text-sm mt-2 leading-snug">
+              <p className="text-primary/80 text-base mt-3 leading-snug">
                 бағдарламаларды талдаймыз деп
               </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="flex gap-5 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground font-semibold px-10 py-7 text-base rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+              className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02]"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -178,7 +181,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary font-semibold px-10 py-7 text-base rounded-2xl bg-transparent hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300"
+              className="border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300"
             >
               Толығырақ білу
             </Button>
@@ -187,20 +190,19 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-end justify-center overflow-hidden bg-white rounded-l-[48px] shadow-2xl"
+          className="relative flex items-end justify-center overflow-hidden rounded-l-[48px] shadow-2xl"
           style={{
-            backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
+            backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0.28) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
-            backgroundPosition: "center top",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/25" />
           <img
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="relative w-full h-full object-cover object-top"
+            className="relative w-full h-full object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
           />
         </div>
       </div>

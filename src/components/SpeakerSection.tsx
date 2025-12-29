@@ -1,5 +1,4 @@
-import speakerPhoto from "@/assets/speaker-photo.jpg";
-import { SPEAKER_BACKGROUND_URL } from "@/lib/constants";
+import { SPEAKER_BACKGROUND_URL, SPEAKER_IMAGE_URL } from "@/lib/constants";
 
 const SpeakerSection = () => {
   const benefits = [
@@ -11,7 +10,11 @@ const SpeakerSection = () => {
   return (
     <section
       className="py-16 md:py-20 px-6 lg:px-16 bg-muted"
-      style={{ backgroundImage: `url(${SPEAKER_BACKGROUND_URL})` }}
+      style={{
+        backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="max-w-6xl mx-auto relative">
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/60" />
@@ -25,7 +28,7 @@ const SpeakerSection = () => {
             <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 hover:scale-105 transition-transform duration-500">
                 <img
-                  src={speakerPhoto}
+                  src={SPEAKER_IMAGE_URL}
                   alt="Құлан Мектепберген"
                   className="w-full h-full object-cover object-top"
                 />

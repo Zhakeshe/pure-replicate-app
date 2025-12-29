@@ -1,4 +1,3 @@
-import { Instagram } from "lucide-react";
 import { useState } from "react";
 
 import { SPEAKER_IMAGE_FALLBACK_URL, SPEAKER_IMAGE_URL } from "@/lib/constants";
@@ -17,7 +16,7 @@ const QuoteSection = () => {
             болашақ сені басқа нәтижелерге апарады. Сен өміріңді сырттан емес, іштен өзгертіп бастайсың.
           </p>
 
-          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-end gap-4 sm:gap-6 lg:gap-8 text-[#2b1b15]">
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 sm:gap-6 lg:gap-8 text-[#2b1b15]">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="w-14 h-14 rounded-full bg-[#f7f3dc] border border-[#e6d9aa] shadow-inner overflow-hidden">
                 <img
@@ -30,19 +29,9 @@ const QuoteSection = () => {
               </div>
               <div className="leading-snug">
                 <div className="text-base md:text-lg font-semibold">Құлан Мектеберген</div>
-                <div className="text-sm md:text-base text-[#8a0f27]">@kulmanom</div>
+                <div className="text-sm md:text-base text-[#8a0f27]">Бағдарлама авторы</div>
               </div>
             </div>
-
-            <a
-              href="https://www.instagram.com/kulmanom"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-[18px] bg-white border border-[#e6d9aa] text-[#8a0f27] font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-[#8a0f27]"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram-да көру
-            </a>
           </div>
         </div>
       </div>

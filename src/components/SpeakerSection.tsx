@@ -34,10 +34,7 @@ const SpeakerSection = () => {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute left-4 top-4 bg-background text-foreground px-4 py-2 rounded-full font-medium shadow-lg">
-                Спикер
-              </div>
-              </div>
+            </div>
 
             {/* Content */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>

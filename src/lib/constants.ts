@@ -5,4 +5,4 @@ export const SPEAKER_BACKGROUND_URL =
   "https://static.tildacdn.com/tild6233-6662-4661-b730-373863663463/-min.png";
 
 export const SPEAKER_IMAGE_URL =
-  "https://static.tildacdn.com/tild6438-3266-4131-b336-336434313833/Mask_group-min.png";
+  "https://www.imgur.la/images/2025/12/29/1W6A6693_resized-1-no-bg-HD-carve.photos.png";

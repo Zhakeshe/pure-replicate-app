@@ -11,8 +11,8 @@ const DiagnosticSection = () => {
 
   return (
     <section className="py-16 md:py-24 px-6 lg:px-16 bg-background">
-      {/* Two column layout for test section */}
       <div className="max-w-6xl mx-auto">
+        {/* Two column layout for test section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Text content */}
           <div className="animate-fade-in">
@@ -46,7 +46,7 @@ const DiagnosticSection = () => {
                     {[1, 2, 3].map((bar) => (
                       <div
                         key={bar}
-                        className={`w-3 h-${bar === 1 ? '4' : bar === 2 ? '6' : '8'} rounded-sm ${
+                        className={`w-3 rounded-sm ${
                           bar <= level.filled
                             ? idx === 0 || idx === 2 ? 'bg-primary-foreground' : 'bg-foreground'
                             : idx === 0 || idx === 2 ? 'bg-primary-foreground/30' : 'bg-muted-foreground/30'
@@ -69,17 +69,34 @@ const DiagnosticSection = () => {
           </div>
         </div>
 
-        {/* P18 Levels Image */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-center text-foreground mb-8">
-            18 бағдарлама <span className="text-primary">деңгейлері</span>
-          </h3>
-          <div className="bg-card border border-border rounded-3xl p-4 md:p-8 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        {/* 18 бағдарлама section with P18 image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          {/* Left - P18 Levels Image */}
+          <div className="bg-card border border-border rounded-3xl p-4 md:p-6 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img
               src={p18Levels}
               alt="P18 барлық нәтижелер деңгейлері"
               className="w-full h-auto rounded-2xl"
             />
+          </div>
+
+          {/* Right - Text content */}
+          <div>
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 italic">
+              18 бағдарлама <span className="text-primary">деңгейлері</span>
+            </h3>
+            
+            <div className="space-y-4 text-foreground/80 text-base md:text-lg leading-relaxed">
+              <p>
+                P18 - бұл 18 психологиялық бағдарламаны анықтауға арналған диагностикалық құрал.
+              </p>
+              <p>
+                Әр бағдарлама сенің өмірінде белгілі бір рөл атқарады және сенің шешімдеріңе, қарым-қатынастарыңа және жалпы әл-ауқатыңа әсер етеді.
+              </p>
+              <p>
+                Тренинг барысында өз бағдарламаларыңды танып, оларды қалай басқаруға болатынын үйренесің.
+              </p>
+            </div>
           </div>
         </div>
       </div>

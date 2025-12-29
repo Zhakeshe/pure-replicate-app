@@ -1,4 +1,4 @@
-import { TrendingUp, Brain, Wallet, MessageCircleOff, Sparkles, Frown, Target, Coins, EyeOff, Scale, Construction, HeartCrack, ShieldAlert, Smartphone, Check } from "lucide-react";
+import { TrendingUp, Brain, Sparkles, Frown, Coins, EyeOff, Scale, Construction, HeartCrack, ShieldAlert, Smartphone, Check } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 interface Participant {
@@ -16,12 +16,8 @@ const participants: Participant[] = [
     Icon: Brain,
   },
   {
-    title: "тапқан ақшасы өзінен артылмайтындар",
-    Icon: Wallet,
-  },
-  {
-    title: "өзінің ойын еркін бөлісе алмайтындар",
-    Icon: MessageCircleOff,
+    title: "ақша бітіп қалады деген оймен өмір сүретіндер",
+    Icon: Coins,
   },
   {
     title: "өз қалауларын ұмытқандар",
@@ -30,14 +26,6 @@ const participants: Participant[] = [
   {
     title: "ештеңе қызық емес деп ойлайтындар",
     Icon: Frown,
-  },
-  {
-    title: "өзінің аутентикалық ісін тапқысы келетіндер",
-    Icon: Target,
-  },
-  {
-    title: "ақша бітіп қалады деген оймен өмір сүретіндер",
-    Icon: Coins,
   },
   {
     title: "ұялып, ашыла алмайтындар (әлемге, әлеуметтік желілерде)",

@@ -8,20 +8,20 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden">
+    <section className="min-h-screen relative overflow-hidden font-sans text-[#f8f1f3]">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}
         <div className="relative bg-primary">
           {/* Top info bar */}
-          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary-foreground/90 text-sm">
+          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary-foreground/85 text-[13px] tracking-wide uppercase">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
-              <span><strong>20-22</strong> қаңтар</span>
+              <span className="font-semibold">20-22 қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
-              <span>онлайн ZOOM</span>
+              <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
 
@@ -58,34 +58,34 @@ const HeroSection = () => {
         </div>
 
         {/* Content below image */}
-        <div className="bg-background px-6 py-8 space-y-6">
-          <p className="text-foreground text-base leading-relaxed">
+        <div className="bg-primary px-6 py-10 space-y-7 text-primary-foreground/95">
+          <p className="text-[15px] leading-7 tracking-[0.01em]">
             Әр адамның бақытты ететін ісі бар. <strong>Өзіңдікін тап.</strong> «Керек», «болады» немесе «басқаларда істеп жатыр» дегенді емес.
           </p>
 
           {/* Diagnostic badge */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 text-[15px] font-medium">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
               <Plus className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-foreground font-medium">психологиялық диагностика</span>
+            <span className="text-primary-foreground">психологиялық диагностика</span>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-12 pt-4">
+          <div className="flex gap-12 pt-4 text-primary-foreground">
             <div>
-              <div className="text-primary font-display text-4xl font-bold italic">
+              <div className="font-display text-4xl font-bold italic drop-shadow-lg">
                 3 күн
               </div>
-              <p className="text-muted-foreground text-sm mt-1">
+              <p className="text-primary-foreground/80 text-sm mt-1 leading-snug">
                 тренинг ұзақтығы<br />Құлан Мектепберген
               </p>
             </div>
             <div>
-              <div className="text-primary font-display text-4xl font-bold italic">
+              <div className="font-display text-4xl font-bold italic drop-shadow-lg">
                 30+
               </div>
-              <p className="text-muted-foreground text-sm mt-1">
+              <p className="text-primary-foreground/80 text-sm mt-1 leading-snug">
                 сағат тірі жұмыс<br />өз ісіңмен және күйіңмен
               </p>
             </div>
@@ -95,7 +95,7 @@ const HeroSection = () => {
           <div className="flex gap-3 pt-4">
             <Button
               size="lg"
-              className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-6 rounded-2xl"
+              className="flex-1 bg-primary-foreground text-primary font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -103,7 +103,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="flex-1 border-border bg-background text-foreground hover:bg-muted font-medium py-6 rounded-2xl"
+              className="flex-1 border-primary-foreground/60 text-primary-foreground font-semibold py-6 rounded-2xl bg-transparent hover:bg-primary-foreground/10 hover:scale-[1.01] transition-all"
             >
               Толығырақ білу
             </Button>
@@ -112,18 +112,18 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop Layout - 50/50 split */}
-      <div className="hidden lg:grid grid-cols-2 min-h-screen">
-        {/* Left side - Content on white background */}
-        <div className="flex flex-col justify-center px-12 xl:px-20 py-12 bg-background">
+      <div className="hidden lg:grid grid-cols-2 min-h-screen bg-primary text-primary-foreground/95">
+        {/* Left side - Content on tinted background */}
+        <div className="flex flex-col justify-center px-12 xl:px-20 py-16 bg-gradient-to-b from-primary via-primary/95 to-primary/90">
           {/* Top info bar */}
-          <div className="flex items-center gap-6 mb-8 text-foreground text-sm">
+          <div className="flex items-center gap-6 mb-8 text-primary-foreground/85 text-sm tracking-[0.08em] uppercase">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span><strong className="text-primary">20-22</strong> қаңтар</span>
+              <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
+              <span className="font-semibold">20-22 қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span>онлайн <strong className="text-primary">ZOOM</strong></span>
+              <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
+              <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
 
@@ -132,38 +132,38 @@ const HeroSection = () => {
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-14 w-auto xl:h-16 drop-shadow"
+              className="h-14 w-auto xl:h-16 drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]"
             />
           </h1>
 
           {/* Description */}
-          <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-primary-foreground/90 text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Әр адамның бақытты ететін ісі бар. <strong>Өзіңдікін тап.</strong> «Керек», «болады» немесе «басқаларда істеп жатыр» дегенді емес.
           </p>
 
           {/* Diagnostic badge */}
           <div className="flex items-center gap-3 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Plus className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-xl bg-primary-foreground flex items-center justify-center shadow-lg">
+              <Plus className="w-5 h-5 text-primary" />
             </div>
-            <span className="text-foreground font-medium">психологиялық диагностика</span>
+            <span className="text-primary-foreground font-semibold text-base tracking-[0.01em]">психологиялық диагностика</span>
           </div>
 
           {/* Stats */}
           <div className="flex gap-16 mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div>
-              <div className="text-primary font-display text-5xl font-bold italic">
+              <div className="font-display text-5xl font-bold italic drop-shadow-lg">
                 3 күн
               </div>
-              <p className="text-muted-foreground text-sm mt-2">
+              <p className="text-primary-foreground/80 text-sm mt-2 leading-snug">
                 тренинг ұзақтығы<br />Құлан Мектепберген
               </p>
             </div>
             <div>
-              <div className="text-primary font-display text-5xl font-bold italic">
+              <div className="font-display text-5xl font-bold italic drop-shadow-lg">
                 30+
               </div>
-              <p className="text-muted-foreground text-sm mt-2">
+              <p className="text-primary-foreground/80 text-sm mt-2 leading-snug">
                 сағат тірі жұмыс<br />өз ісіңмен және күйіңмен
               </p>
             </div>
@@ -173,7 +173,7 @@ const HeroSection = () => {
           <div className="flex gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-primary-foreground text-primary font-semibold px-10 py-7 text-base rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -181,7 +181,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-border bg-background text-foreground hover:bg-muted font-medium px-10 py-7 text-base rounded-2xl hover:scale-105 transition-all duration-300"
+              className="border-primary-foreground/70 text-primary-foreground font-semibold px-10 py-7 text-base rounded-2xl bg-transparent hover:bg-primary-foreground/10 hover:scale-[1.02] transition-all duration-300"
             >
               Толығырақ білу
             </Button>

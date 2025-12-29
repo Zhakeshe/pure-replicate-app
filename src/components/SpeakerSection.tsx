@@ -9,7 +9,7 @@ const SpeakerSection = () => {
 
   return (
     <section
-      className="py-16 md:py-20 px-6 lg:px-16 bg-muted"
+      className="py-16 md:py-20 px-6 lg:px-16 bg-primary text-primary-foreground"
       style={{
         backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
         backgroundSize: "cover",
@@ -18,16 +18,16 @@ const SpeakerSection = () => {
       }}
     >
       <div className="max-w-6xl mx-auto relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/82 to-background/65" />
-        <div className="relative backdrop-blur-sm bg-background/80 rounded-3xl border border-white/5 shadow-2xl p-6 md:p-10">
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center animate-fade-in">
-            Тренинг <span className="text-primary">қалай өтеді?</span>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/75" />
+        <div className="relative backdrop-blur-sm bg-primary/60 rounded-3xl border border-white/10 shadow-2xl p-6 md:p-10">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground mb-8 md:mb-12 text-center animate-fade-in tracking-wide">
+            Тренинг <span className="text-primary-foreground">қалай өтеді?</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image */}
             <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="aspect-[3/4] rounded-[32px] overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 hover:scale-105 transition-transform duration-500 shadow-2xl border border-white/5">
+              <div className="aspect-[3/4] rounded-[32px] overflow-hidden bg-gradient-to-br from-primary/25 to-primary/55 hover:scale-105 transition-transform duration-500 shadow-2xl border border-white/10">
                 <img
                   src={SPEAKER_IMAGE_URL}
                   alt="Құлан Мектепберген"
@@ -37,27 +37,27 @@ const SpeakerSection = () => {
               <div className="absolute left-4 top-4 bg-background text-foreground px-4 py-2 rounded-full font-medium shadow-lg">
                 Спикер
               </div>
-            </div>
+              </div>
 
             {/* Content */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <p className="text-muted-foreground mb-2">Автор және методолог</p>
-              <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8">
+              <p className="text-primary-foreground/80 mb-2 text-sm md:text-base tracking-[0.03em] uppercase">Автор және методолог</p>
+              <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 md:mb-8 drop-shadow-lg">
                 Құлан Мектепберген
               </h3>
-              <p className="text-muted-foreground mb-2">@kulanman</p>
+              <p className="text-primary-foreground/85 mb-2 text-sm md:text-base">@kulanman</p>
 
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: `${idx * 0.1 + 0.3}s` }}>
-                    <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground text-sm md:text-base">{benefit}</span>
+                    <span className="w-2 h-2 rounded-full bg-primary-foreground mt-2 flex-shrink-0" />
+                    <span className="text-primary-foreground text-sm md:text-base leading-relaxed">{benefit}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="border-t border-border pt-6">
-                <p className="text-muted-foreground mb-3 text-sm md:text-base">
+              <div className="border-t border-white/15 pt-6">
+                <p className="text-primary-foreground/80 mb-3 text-sm md:text-base leading-relaxed">
                   Бұл тренинг - біреудің айтқанын қайталау емес. Өзіңмен қайта танысатын кеңістік.
                 </p>
               </div>

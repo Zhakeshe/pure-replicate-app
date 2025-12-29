@@ -36,14 +36,16 @@ const HeroSection = () => {
           
           {/* Speaker image with red background */}
           <div
-            className="relative mt-2"
+            className="relative mt-2 rounded-[32px] overflow-hidden shadow-2xl"
             style={{
               backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/75 to-primary/35" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40" />
+            <div className="absolute inset-0 bg-gradient-to-br from-background/25 via-transparent to-transparent" />
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
@@ -188,14 +190,16 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-end justify-center overflow-hidden bg-primary"
+          className="relative flex items-end justify-center overflow-hidden bg-primary rounded-l-[48px] shadow-2xl"
           style={{
             backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/75 to-primary/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/25 via-transparent to-transparent" />
           <img
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"

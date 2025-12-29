@@ -13,12 +13,13 @@ const SpeakerSection = () => {
       style={{
         backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="max-w-6xl mx-auto relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/60" />
-        <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/82 to-background/65" />
+        <div className="relative backdrop-blur-sm bg-background/80 rounded-3xl border border-white/5 shadow-2xl p-6 md:p-10">
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center animate-fade-in">
             Тренинг <span className="text-primary">қалай өтеді?</span>
           </h2>
@@ -26,7 +27,7 @@ const SpeakerSection = () => {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image */}
             <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 hover:scale-105 transition-transform duration-500">
+              <div className="aspect-[3/4] rounded-[32px] overflow-hidden bg-gradient-to-br from-primary/20 to-primary/40 hover:scale-105 transition-transform duration-500 shadow-2xl border border-white/5">
                 <img
                   src={SPEAKER_IMAGE_URL}
                   alt="Құлан Мектепберген"

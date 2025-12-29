@@ -43,10 +43,10 @@ const Footer = () => {
               className="h-8 w-auto drop-shadow"
             />
           </div>
-          <p className="text-sm text-background/60 mb-2">
+          <p className="text-sm text-background mb-2">
             © 2025 Құлан Мектепберген
           </p>
-          <p className="text-sm text-background/60">
+          <p className="text-sm text-background">
             @kulanman
           </p>
         </div>

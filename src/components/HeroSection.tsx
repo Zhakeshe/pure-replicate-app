@@ -1,7 +1,7 @@
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import speakerPhoto from "@/assets/speaker-photo.jpg";
-import { AUTHENTICITY_LOGO_URL } from "@/lib/constants";
+import { AUTHENTICITY_LOGO_URL, SPEAKER_BACKGROUND_URL } from "@/lib/constants";
 
 const HeroSection = () => {
   return (
@@ -32,12 +32,19 @@ const HeroSection = () => {
           </h1>
           
           {/* Speaker image with red background */}
-          <div className="relative mt-2">
+          <div
+            className="relative mt-2"
+            style={{ backgroundImage: `url(${SPEAKER_BACKGROUND_URL})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/40" />
             <img
               src={speakerPhoto}
               alt="Құлан Мектепберген"
-              className="w-full h-[55vh] object-cover object-top"
+              className="relative w-full h-[55vh] object-cover object-top mix-blend-screen"
             />
+            <div className="absolute left-4 top-4 bg-background text-foreground px-3 py-1.5 rounded-full font-medium shadow-lg">
+              Спикер
+            </div>
           </div>
         </div>
 
@@ -173,12 +180,19 @@ const HeroSection = () => {
         </div>
 
         {/* Right side - Speaker Photo on RED background */}
-        <div className="relative bg-primary flex items-end justify-center overflow-hidden">
+        <div
+          className="relative flex items-end justify-center overflow-hidden bg-primary"
+          style={{ backgroundImage: `url(${SPEAKER_BACKGROUND_URL})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/40" />
           <img
             src={speakerPhoto}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="w-full h-full object-cover object-top"
+            className="relative w-full h-full object-cover object-top mix-blend-screen"
           />
+          <div className="absolute left-6 top-6 bg-background text-foreground px-4 py-2 rounded-full font-medium shadow-lg">
+            Спикер
+          </div>
         </div>
       </div>
     </section>

@@ -74,9 +74,9 @@ const HeroSection = () => {
           </p>
 
           {/* Highlighted duration */}
-          <div className="flex items-center gap-12 pt-4 text-primary" data-animate-on-scroll="animate-pop-glow" data-animate-delay="0.05s">
+          <div className="flex items-center gap-12 pt-4 text-primary" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
             <div>
-              <div className="font-display text-4xl font-bold drop-shadow-lg text-primary">
+              <div className="font-display text-4xl font-bold text-primary">
                 3 күн
               </div>
             </div>
@@ -147,11 +147,11 @@ const HeroSection = () => {
           {/* Highlighted duration */}
           <div
             className="flex gap-20 mb-12"
-            data-animate-on-scroll="animate-pop-glow"
+            data-animate-on-scroll="animate-rise-bloom"
             data-animate-delay="0.2s"
           >
             <div>
-              <div className="font-display text-6xl font-bold drop-shadow-xl text-primary">
+              <div className="font-display text-6xl font-bold text-primary">
                 3 күн
               </div>
             </div>

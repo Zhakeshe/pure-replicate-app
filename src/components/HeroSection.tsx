@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import speakerPhoto from "@/assets/speaker-photo.jpg";
+import { AUTHENTICITY_LOGO_URL } from "@/lib/constants";
 
 const HeroSection = () => {
   return (
@@ -22,8 +23,12 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary-foreground px-6 tracking-tight uppercase italic">
-            АУТЕНТИЧНОСТЬ
+          <h1 className="px-6 pt-1">
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-12 w-auto md:h-14 drop-shadow"
+            />
           </h1>
           
           {/* Speaker image with red background */}
@@ -107,8 +112,12 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-display text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary tracking-tight uppercase italic mb-6 animate-fade-in">
-            АУТЕНТИЧНОСТЬ
+          <h1 className="mb-6 animate-fade-in">
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-14 w-auto xl:h-16 drop-shadow"
+            />
           </h1>
 
           {/* Description */}

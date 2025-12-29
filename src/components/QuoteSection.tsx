@@ -1,25 +1,44 @@
 import { Instagram } from "lucide-react";
+import { useState } from "react";
+
+import { SPEAKER_IMAGE_FALLBACK_URL, SPEAKER_IMAGE_URL } from "@/lib/constants";
 
 const QuoteSection = () => {
-  return (
-    <section className="py-14 md:py-20 px-6 lg:px-16 bg-muted/30 relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_14%_24%,rgba(128,0,16,0.06),transparent_30%),radial-gradient(circle_at_82%_20%,rgba(128,0,16,0.05),transparent_32%),radial-gradient(circle_at_60%_82%,rgba(128,0,16,0.05),transparent_28%)] animate-parallax-soft" />
+  const [avatarSrc, setAvatarSrc] = useState(SPEAKER_IMAGE_URL);
 
-      <div className="max-w-5xl mx-auto relative">
-        <div
-          className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.01]"
-          data-animate-on-scroll="animate-swipe-right-strong animate-pop-glow"
-        >
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground leading-relaxed mb-6">
-            «Бағдарламаларды көргеннен кейін, сенде басқаша таңдау жасауға мүмкіндік ашылады.»
+  return (
+    <section className="py-14 md:py-20 px-6 lg:px-16 bg-[#f7f3dc] relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_20%_30%,rgba(128,0,16,0.08),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(128,0,16,0.06),transparent_30%),radial-gradient(circle_at_50%_85%,rgba(128,0,16,0.05),transparent_30%)]" />
+
+      <div className="max-w-6xl mx-auto relative" data-animate-on-scroll="animate-swipe-up-strong animate-pop-soft">
+        <div className="bg-[#fdfbf0] border border-[#e6d9aa] shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[32px] p-8 md:p-12 lg:p-14">
+          <p className="text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
+            Бағдарламаларды көргеннен кейін, басқаша таңдау жасауға мүмкіндік ашылады. Ол таңдау басқа болашағыңа жетелейді. Ол
+            болашақ сені басқа нәтижелерге апарады. Сен өміріңді сырттан емес, іштен өзгертіп бастайсың.
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="text-lg text-muted-foreground">— Қ. Мектепберген</div>
+
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-end gap-4 sm:gap-6 lg:gap-8 text-[#2b1b15]">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="w-14 h-14 rounded-full bg-[#f7f3dc] border border-[#e6d9aa] shadow-inner overflow-hidden">
+                <img
+                  src={avatarSrc}
+                  onError={() => setAvatarSrc(SPEAKER_IMAGE_FALLBACK_URL)}
+                  alt="Құлан Мектеберген"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="leading-snug">
+                <div className="text-base md:text-lg font-semibold">Құлан Мектеберген</div>
+                <div className="text-sm md:text-base text-[#8a0f27]">@kulmanom</div>
+              </div>
+            </div>
+
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/kulmanom"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-primary text-primary-foreground font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-[18px] bg-white border border-[#e6d9aa] text-[#8a0f27] font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-[#8a0f27]"
             >
               <Instagram className="w-5 h-5" />
               Instagram-да көру

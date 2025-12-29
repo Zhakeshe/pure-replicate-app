@@ -113,6 +113,15 @@ Primary color: #800010 -> hsl(353, 100%, 25%)
     animation: bookOpen 1.5s ease-out forwards;
   }
 
+  .animate-gradient-pan {
+    background-size: 220% 220%;
+    animation: gradientPan 10s ease-in-out infinite;
+  }
+
+  .animate-float-soft {
+    animation: floatSoft 8s ease-in-out infinite;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -141,6 +150,33 @@ Primary color: #800010 -> hsl(353, 100%, 25%)
     }
     100% {
       transform: rotateY(-180deg);
+    }
+  }
+
+  @keyframes gradientPan {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes floatSoft {
+    0% {
+      transform: translateY(0px) scale(1);
+      filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.18));
+    }
+    50% {
+      transform: translateY(-10px) scale(1.01);
+      filter: drop-shadow(0 26px 45px rgba(0, 0, 0, 0.24));
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+      filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.18));
     }
   }
 

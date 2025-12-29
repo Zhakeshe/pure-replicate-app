@@ -1,4 +1,3 @@
-import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   AUTHENTICITY_LOGO_FILTER,
@@ -46,12 +45,13 @@ const HeroSection = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-primary/10 animate-gradient-pan" />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
             <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/40 to-transparent" />
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
-              className="relative w-full h-[55vh] object-cover object-top"
+              className="relative w-full h-[55vh] object-cover object-top animate-float-soft"
             />
           </div>
         </div>
@@ -62,31 +62,12 @@ const HeroSection = () => {
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
-          {/* Diagnostic badge */}
-          <div className="flex items-center gap-3 text-[15px] font-medium">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-md shadow-primary/30">
-              <Plus className="w-5 h-5 text-primary-foreground drop-shadow" />
-            </div>
-            <span className="text-primary font-semibold">психологиялық диагностика</span>
-          </div>
-
-          {/* Stats */}
-          <div className="flex gap-12 pt-4 text-primary">
+          {/* Highlighted duration */}
+          <div className="flex items-center gap-12 pt-4 text-primary">
             <div>
-              <div className="font-display text-4xl font-bold italic drop-shadow-lg text-primary">
+              <div className="font-display text-4xl font-bold drop-shadow-lg text-primary">
                 3 күн
               </div>
-              <p className="text-primary/80 text-sm mt-1 leading-snug">
-                тренинг ұзақтығы<br />Құлан Мектепберген
-              </p>
-            </div>
-            <div>
-              <div className="font-display text-4xl font-bold italic drop-shadow-lg text-primary">
-                18
-              </div>
-              <p className="text-primary/80 text-sm mt-1 leading-snug">
-                бағдарламаларды талдаймыз деп
-              </p>
             </div>
           </div>
 
@@ -144,31 +125,12 @@ const HeroSection = () => {
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
-          {/* Diagnostic badge */}
-          <div className="flex items-center gap-3 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/35">
-              <Plus className="w-5 h-5 text-primary-foreground drop-shadow" />
-            </div>
-            <span className="text-primary font-semibold text-base tracking-[0.01em]">психологиялық диагностика</span>
-          </div>
-
-          {/* Stats */}
-          <div className="flex gap-20 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          {/* Highlighted duration */}
+          <div className="flex gap-20 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div>
-              <div className="font-display text-6xl font-bold italic drop-shadow-xl text-primary">
+              <div className="font-display text-6xl font-bold drop-shadow-xl text-primary">
                 3 күн
               </div>
-              <p className="text-primary/80 text-base mt-3 leading-snug">
-                тренинг ұзақтығы<br />Құлан Мектепберген
-              </p>
-            </div>
-            <div>
-              <div className="font-display text-6xl font-bold italic drop-shadow-xl text-primary">
-                18
-              </div>
-              <p className="text-primary/80 text-base mt-3 leading-snug">
-                бағдарламаларды талдаймыз деп
-              </p>
             </div>
           </div>
 
@@ -195,17 +157,18 @@ const HeroSection = () => {
         <div
           className="relative flex items-end justify-center overflow-hidden rounded-l-[48px] shadow-2xl"
           style={{
-            backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0.28) 100%), url(${SPEAKER_BACKGROUND_URL})`,
+            backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
           <img
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="relative w-full h-full object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
+            className="relative w-full h-full object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] animate-float-soft"
           />
         </div>
       </div>

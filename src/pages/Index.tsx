@@ -5,6 +5,7 @@ import DiagnosticSection from "@/components/DiagnosticSection";
 import SpeakerSection from "@/components/SpeakerSection";
 import TariffsSection from "@/components/TariffsSection";
 import QuoteSection from "@/components/QuoteSection";
+import BenefitsSection from "@/components/BenefitsSection";
 import Footer from "@/components/Footer";
 import useScrollAnimations from "@/hooks/useScrollAnimations";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <ParticipantsSection />
       <DiagnosticSection />
       <QuoteSection />
+      <BenefitsSection />
       <SpeakerSection />
       <TariffsSection />
       <Footer />

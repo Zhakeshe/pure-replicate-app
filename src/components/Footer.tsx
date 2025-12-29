@@ -1,4 +1,4 @@
-import { AUTHENTICITY_LOGO_URL } from "@/lib/constants";
+import { AUTHENTICITY_LOGO_FILTER, AUTHENTICITY_LOGO_URL } from "@/lib/constants";
 
 const Footer = () => {
   const scientists = [
@@ -41,6 +41,7 @@ const Footer = () => {
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-8 w-auto drop-shadow"
+              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
             />
           </div>
           <p className="text-sm text-background mb-2">

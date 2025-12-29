@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
+  AUTHENTICITY_LOGO_FILTER,
   AUTHENTICITY_LOGO_URL,
   SPEAKER_BACKGROUND_URL,
   SPEAKER_IMAGE_URL,
@@ -31,6 +32,7 @@ const HeroSection = () => {
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-12 w-auto md:h-14 drop-shadow"
+              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
             />
           </h1>
           
@@ -130,6 +132,7 @@ const HeroSection = () => {
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-20 w-auto xl:h-24 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
+              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
             />
           </h1>
 

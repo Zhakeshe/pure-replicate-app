@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
-Primary color: #b40a1b -> hsl(355, 89%, 37%)
+Primary color: #800010 -> hsl(353, 100%, 25%)
 */
 
 @layer base {
@@ -18,58 +18,58 @@ Primary color: #b40a1b -> hsl(355, 89%, 37%)
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    /* Deep red/burgundy primary color #b40a1b */
-    --primary: 355 89% 37%;
+    /* Deep burgundy primary color #800010 */
+    --primary: 353 100% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 355 20% 95%;
-    --secondary-foreground: 355 89% 37%;
+    --secondary: 353 20% 95%;
+    --secondary-foreground: 353 100% 25%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 355 30% 90%;
-    --accent-foreground: 355 89% 37%;
+    --accent: 353 30% 90%;
+    --accent-foreground: 353 100% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 355 89% 37%;
+    --ring: 353 100% 25%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 25%;
-    --sidebar-primary: 355 89% 37%;
+    --sidebar-primary: 353 100% 25%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 355 20% 95%;
-    --sidebar-accent-foreground: 355 89% 37%;
+    --sidebar-accent: 353 20% 95%;
+    --sidebar-accent-foreground: 353 100% 25%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 355 89% 45%;
+    --sidebar-ring: 353 100% 35%;
   }
 
   .dark {
     --background: 355 40% 12%;
     --foreground: 0 0% 95%;
 
-    --card: 355 30% 15%;
+    --card: 353 30% 15%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 355 40% 10%;
+    --popover: 353 40% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 355 80% 55%;
+    --primary: 353 75% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 355 30% 20%;
+    --secondary: 353 30% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 355 20% 18%;
+    --muted: 353 20% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 355 30% 25%;
+    --accent: 353 30% 25%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 62.8% 30.6%;
@@ -77,15 +77,15 @@ Primary color: #b40a1b -> hsl(355, 89%, 37%)
 
     --border: 355 20% 25%;
     --input: 355 20% 25%;
-    --ring: 355 80% 55%;
-    --sidebar-background: 355 40% 10%;
+    --ring: 353 75% 52%;
+    --sidebar-background: 353 40% 10%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 355 80% 55%;
+    --sidebar-primary: 353 75% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 355 30% 18%;
+    --sidebar-accent: 353 30% 18%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 355 20% 22%;
-    --sidebar-ring: 355 80% 60%;
+    --sidebar-border: 353 20% 22%;
+    --sidebar-ring: 353 75% 55%;
   }
 }
 

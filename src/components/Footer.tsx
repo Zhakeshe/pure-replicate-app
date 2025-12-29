@@ -40,7 +40,7 @@ const Footer = () => {
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-8 w-auto drop-shadow"
+              className="h-10 w-auto drop-shadow"
               style={{ filter: AUTHENTICITY_LOGO_FILTER }}
             />
           </div>

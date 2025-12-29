@@ -4,29 +4,29 @@ import p18Levels from "@/assets/p18-levels.png";
 
 const DiagnosticSection = () => {
   const levels = [
-    { title: "Стресс деңгейі", filled: 2, color: "bg-primary" },
-    { title: "Өнімділік деңгейі", filled: 2, color: "bg-foreground" },
-    { title: "Энергия деңгейі", filled: 3, color: "bg-primary" },
+    { title: "Стресс деңгейі", filled: 2, color: "bg-primary text-primary-foreground" },
+    { title: "Өнімділік деңгейі", filled: 2, color: "bg-card border border-border text-foreground" },
+    { title: "Энергия деңгейі", filled: 3, color: "bg-foreground text-background" },
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-background">
+    <section className="py-16 md:py-24 px-6 lg:px-16 bg-muted/20">
       <div className="max-w-6xl mx-auto">
         {/* Two column layout for test section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Text content */}
-          <div className="animate-fade-in">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 italic">
+          <div className="animate-fade-in space-y-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Психологиялық<br />диагностика
             </h2>
 
-            <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-8">
+            <p className="text-foreground/80 text-lg md:text-xl leading-relaxed">
               P18 психо-эмоционалдық күй трекерінің көмегімен бірден анықтайсың:
             </p>
 
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Тест тапсырамын
@@ -34,11 +34,11 @@ const DiagnosticSection = () => {
           </div>
 
           {/* Right - Level cards */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {levels.map((level, idx) => (
               <div
                 key={idx}
-                className={`${idx === 0 || idx === 2 ? 'bg-primary text-primary-foreground' : 'bg-card border border-border text-foreground'} rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300`}
+                className={`${level.color} rounded-2xl p-6 min-h-[170px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-sm`}
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <div className="flex items-center justify-between">
@@ -48,24 +48,28 @@ const DiagnosticSection = () => {
                         key={bar}
                         className={`w-3 rounded-sm ${
                           bar <= level.filled
-                            ? idx === 0 || idx === 2 ? 'bg-primary-foreground' : 'bg-foreground'
-                            : idx === 0 || idx === 2 ? 'bg-primary-foreground/30' : 'bg-muted-foreground/30'
+                            ? idx === 0
+                              ? 'bg-primary-foreground'
+                              : idx === 1
+                                ? 'bg-foreground'
+                                : 'bg-background'
+                            : idx === 0
+                              ? 'bg-primary-foreground/30'
+                              : idx === 1
+                                ? 'bg-muted-foreground/40'
+                                : 'bg-background/40'
                         }`}
                         style={{ height: `${bar * 8 + 8}px` }}
                       />
                     ))}
                   </div>
-                  <BarChart3 className={`w-6 h-6 ${idx === 0 || idx === 2 ? 'text-primary-foreground/50' : 'text-muted-foreground'}`} />
+                  <BarChart3 className={`w-6 h-6 ${idx === 0 ? 'text-primary-foreground/60' : idx === 1 ? 'text-muted-foreground' : 'text-background/60'}`} />
                 </div>
-                <h3 className="font-display text-xl font-semibold mt-4">
+                <h3 className="font-display text-xl font-semibold mt-6 leading-tight">
                   {level.title}
                 </h3>
               </div>
             ))}
-
-            <p className="text-muted-foreground text-sm pt-4">
-              Воркшоп кезінде дауыс параметрлерін бағалау негізінде талдау аласыз
-            </p>
           </div>
         </div>
 
@@ -81,11 +85,11 @@ const DiagnosticSection = () => {
           </div>
 
           {/* Right - Text content */}
-          <div>
-            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 italic">
+          <div className="space-y-6">
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
               18 бағдарлама <span className="text-primary">деңгейлері</span>
             </h3>
-            
+
             <div className="space-y-4 text-foreground/80 text-base md:text-lg leading-relaxed">
               <p>
                 P18 - бұл 18 психологиялық бағдарламаны анықтауға арналған диагностикалық құрал.

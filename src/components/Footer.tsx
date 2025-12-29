@@ -1,3 +1,5 @@
+import { AUTHENTICITY_LOGO_URL } from "@/lib/constants";
+
 const Footer = () => {
   const scientists = [
     { name: "Джеффри Янг" },
@@ -34,13 +36,17 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-background/20">
-          <div className="font-display text-2xl font-bold text-primary mb-4 italic">
-            Аутентичность
+          <div className="font-display text-2xl font-bold text-primary mb-4 italic flex justify-center">
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-8 w-auto drop-shadow"
+            />
           </div>
-          <p className="text-sm text-background/60 mb-2">
+          <p className="text-sm text-background mb-2">
             © 2025 Құлан Мектепберген
           </p>
-          <p className="text-sm text-background/60">
+          <p className="text-sm text-background">
             @kulanman
           </p>
         </div>

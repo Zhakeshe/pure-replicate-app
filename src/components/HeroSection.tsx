@@ -1,6 +1,10 @@
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import speakerPhoto from "@/assets/speaker-photo.jpg";
+import {
+  AUTHENTICITY_LOGO_URL,
+  SPEAKER_BACKGROUND_URL,
+  SPEAKER_IMAGE_URL,
+} from "@/lib/constants";
 
 const HeroSection = () => {
   return (
@@ -22,17 +26,32 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary-foreground px-6 tracking-tight uppercase italic">
-            АУТЕНТИЧНОСТЬ
+          <h1 className="px-6 pt-1">
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-12 w-auto md:h-14 drop-shadow"
+            />
           </h1>
           
           {/* Speaker image with red background */}
-          <div className="relative mt-2">
+          <div
+            className="relative mt-2"
+            style={{
+              backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/75 to-primary/35" />
             <img
-              src={speakerPhoto}
+              src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
-              className="w-full h-[55vh] object-cover object-top"
+              className="relative w-full h-[55vh] object-cover object-top"
             />
+            <div className="absolute left-4 top-4 bg-background text-foreground px-3 py-1.5 rounded-full font-medium shadow-lg">
+              Спикер
+            </div>
           </div>
         </div>
 
@@ -107,8 +126,12 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-display text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary tracking-tight uppercase italic mb-6 animate-fade-in">
-            АУТЕНТИЧНОСТЬ
+          <h1 className="mb-6 animate-fade-in">
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-14 w-auto xl:h-16 drop-shadow"
+            />
           </h1>
 
           {/* Description */}
@@ -164,12 +187,23 @@ const HeroSection = () => {
         </div>
 
         {/* Right side - Speaker Photo on RED background */}
-        <div className="relative bg-primary flex items-end justify-center overflow-hidden">
+        <div
+          className="relative flex items-end justify-center overflow-hidden bg-primary"
+          style={{
+            backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/75 to-primary/35" />
           <img
-            src={speakerPhoto}
+            src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="w-full h-full object-cover object-top"
+            className="relative w-full h-full object-cover object-top"
           />
+          <div className="absolute left-6 top-6 bg-background text-foreground px-4 py-2 rounded-full font-medium shadow-lg">
+            Спикер
+          </div>
         </div>
       </div>
     </section>

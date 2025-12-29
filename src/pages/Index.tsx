@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import FindSection from "@/components/FindSection";
-import ProcessSection from "@/components/ProcessSection";
 import GallerySection from "@/components/GallerySection";
 import ParticipantsSection from "@/components/ParticipantsSection";
 import DiagnosticSection from "@/components/DiagnosticSection";
@@ -20,7 +19,6 @@ const Index = () => {
       <GallerySection />
       <ParticipantsSection />
       <DiagnosticSection />
-      <ProcessSection />
       <QuoteSection />
       <SpeakerSection />
       <TariffsSection />

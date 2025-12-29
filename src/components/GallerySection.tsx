@@ -24,7 +24,7 @@ const GallerySection = () => {
 
   return (
     <section className="py-16 md:py-20 px-6 lg:px-16 bg-background">
-      <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-10 md:mb-12 text-center animate-fade-in">
+      <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-10 md:mb-12 text-center animate-rise-bloom">
         Тренинг <span className="text-primary">ережесі:</span>
       </h2>
 
@@ -32,7 +32,7 @@ const GallerySection = () => {
         {rules.map((rule, idx) => (
           <div
             key={idx}
-            className="bg-card border border-border rounded-2xl p-5 md:p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in text-center"
+            className={`bg-card border border-border rounded-2xl p-5 md:p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             <div className="text-3xl md:text-4xl mb-3 md:mb-4">{rule.icon}</div>

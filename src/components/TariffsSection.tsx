@@ -14,12 +14,12 @@ const TariffsSection = () => {
 
   return (
     <section id="tariff" className="py-16 md:py-24 px-6 lg:px-16 bg-muted">
-      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 md:mb-16 text-center animate-fade-in">
+      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 md:mb-16 text-center animate-rise-bloom">
         Тренинг <span className="text-primary">бағасы</span>
       </h2>
 
       <div className="max-w-md mx-auto">
-        <div className="bg-primary text-primary-foreground rounded-3xl p-8 md:p-10 text-center animate-fade-in hover:scale-[1.02] transition-transform duration-300" style={{ animationDelay: '0.1s' }}>
+        <div className="bg-primary text-primary-foreground rounded-3xl p-8 md:p-10 text-center animate-pop-glow hover:scale-[1.02] transition-transform duration-300 animate-rise-bloom" style={{ animationDelay: '0.1s' }}>
           <h3 className="font-display text-xl md:text-2xl font-bold mb-6">
             {tariff.name}
           </h3>

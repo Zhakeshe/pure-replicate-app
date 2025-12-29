@@ -12,15 +12,15 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         {/* Scientific basis section */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-swipe-left-strong">
             <span className="bg-primary/80 px-4 py-1">БАҒДАРЛАМА НЕГІЗДЕЛГЕН</span>
           </h2>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 animate-swipe-right-strong" style={{ animationDelay: '0.1s' }}>
             <span className="bg-primary/80 px-4 py-1">ҒЫЛЫМИ ТЕОРИЯЛАР МЕН ИДЕЯЛАРҒА</span>
           </h2>
 
           {/* Scientists */}
-          <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="mb-8 animate-rise-bloom" style={{ animationDelay: '0.2s' }}>
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4">
               {scientists.map((scientist, idx) => (
                 <span key={idx} className="text-background/80 text-lg md:text-xl">

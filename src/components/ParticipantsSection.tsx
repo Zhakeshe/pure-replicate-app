@@ -70,7 +70,7 @@ const ParticipantsSection = () => {
     <section className="py-16 md:py-24 bg-muted relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_25%_30%,rgba(128,0,16,0.06),transparent_32%),radial-gradient(circle_at_70%_10%,rgba(128,0,16,0.05),transparent_28%),radial-gradient(circle_at_60%_80%,rgba(128,0,16,0.05),transparent_32%)] animate-parallax-soft" />
       <div className="px-6 lg:px-16 mb-10 md:mb-12 relative">
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center animate-fade-in">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center animate-rise-bloom">
           Кімдерге <span className="text-primary">арналған?</span>
         </h2>
       </div>
@@ -83,7 +83,7 @@ const ParticipantsSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 animate-fade-in animate-tilt-rise group"
+                className={`bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 animate-tilt-rise group ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
                 {/* Image placeholder with icon */}

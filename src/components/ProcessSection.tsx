@@ -39,8 +39,8 @@ const ProcessSection = () => {
         {/* Section with image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Image */}
-          <div className="animate-fade-in order-2 lg:order-1">
-            <div className="rounded-3xl overflow-hidden shadow-2xl animate-tilt-rise">
+          <div className="order-2 lg:order-1 animate-swipe-left-strong">
+            <div className="rounded-3xl overflow-hidden shadow-2xl animate-tilt-rise animate-pop-glow">
               <img
                 src={zoomTraining}
                 alt="Тренинг ZOOM форматында"
@@ -50,7 +50,7 @@ const ProcessSection = () => {
           </div>
 
           {/* Right - Title and description */}
-          <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="order-1 lg:order-2 animate-swipe-right-strong" style={{ animationDelay: '0.1s' }}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Тренинг қалай{" "}
               <span className="text-primary">өтеді?</span>
@@ -73,7 +73,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Program cards */}
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-fade-in">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-rise-bloom">
           3 күндік тренинг <span className="text-primary">бағдарламасы:</span>
         </h3>
 
@@ -83,7 +83,7 @@ const ProcessSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-fade-in animate-tilt-rise"
+                className={`bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
                 style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
               >
                 <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 shadow-lg`}>

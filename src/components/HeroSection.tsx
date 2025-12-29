@@ -16,7 +16,7 @@ const HeroSection = () => {
         {/* Hero with red background and photo */}
         <div className="relative bg-white">
           {/* Top info bar */}
-          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary text-[13px] tracking-wide uppercase">
+          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary text-[13px] tracking-wide uppercase animate-swipe-left-strong">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary rounded-full" />
               <span className="font-semibold">20-22 қаңтар</span>
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="px-6 pt-1">
+          <h1 className="px-6 pt-1 animate-rise-bloom">
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
@@ -39,7 +39,7 @@ const HeroSection = () => {
           
           {/* Speaker image with light background */}
           <div
-            className="relative mt-2 rounded-[32px] overflow-hidden shadow-2xl"
+            className="relative mt-2 rounded-[32px] overflow-hidden shadow-2xl animate-swipe-right-strong"
             style={{
               backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
               backgroundSize: "cover",
@@ -65,7 +65,7 @@ const HeroSection = () => {
         </div>
 
         {/* Content below image */}
-        <div className="bg-white px-6 py-10 space-y-7 text-primary">
+        <div className="bg-white px-6 py-10 space-y-7 text-primary animate-rise-bloom">
           <p className="text-[15px] leading-7 tracking-[0.01em] text-primary">
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
@@ -83,7 +83,7 @@ const HeroSection = () => {
           <div className="flex gap-3 pt-4">
             <Button
               size="lg"
-              className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"
+              className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all animate-pop-glow"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -91,7 +91,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="flex-1 border-primary text-primary font-semibold py-6 rounded-2xl bg-transparent hover:bg-primary/10 hover:scale-[1.01] transition-all"
+              className="flex-1 border-primary text-primary font-semibold py-6 rounded-2xl bg-transparent hover:bg-primary/10 hover:scale-[1.01] transition-all animate-pop-glow"
             >
               Толығырақ білу
             </Button>
@@ -100,9 +100,9 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop Layout - 50/50 split */}
-      <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-primary">
-        {/* Left side - Content on tinted background */}
-        <div className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-20 bg-white text-primary">
+        <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-primary">
+          {/* Left side - Content on tinted background */}
+          <div className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-20 bg-white text-primary animate-swipe-left-strong">
           {/* Top info bar */}
           <div className="flex items-center gap-7 mb-10 text-primary text-sm tracking-[0.08em] uppercase">
             <div className="flex items-center gap-2">
@@ -146,7 +146,7 @@ const HeroSection = () => {
           <div className="flex gap-5 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02]"
+              className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02] animate-pop-glow"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -154,7 +154,7 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300"
+              className="border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300 animate-pop-glow"
             >
               Толығырақ білу
             </Button>
@@ -163,7 +163,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-end justify-center overflow-hidden rounded-l-[48px] shadow-2xl"
+          className="relative flex items-end justify-center overflow-hidden rounded-l-[48px] shadow-2xl animate-swipe-right-strong"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",

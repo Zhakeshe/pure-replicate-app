@@ -13,7 +13,7 @@ const SpeakerSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[1.05fr,1fr] gap-8 items-center">
           {/* Content */}
-          <div className="bg-white rounded-[28px] shadow-xl border border-primary/10 p-7 md:p-10 animate-fade-in animate-tilt-rise">
+          <div className="bg-white rounded-[28px] shadow-xl border border-primary/10 p-7 md:p-10 animate-tilt-rise animate-swipe-left-strong">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[#810013] mb-6">
               Спикер
             </h2>
@@ -28,7 +28,7 @@ const SpeakerSection = () => {
             </ul>
 
             <button
-              className="px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[#810013] text-white font-semibold text-base md:text-lg shadow-lg hover:scale-[1.02] transition-transform"
+              className="px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[#810013] text-white font-semibold text-base md:text-lg shadow-lg hover:scale-[1.02] transition-transform animate-pop-glow"
               onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
             >
               Қатысамын
@@ -36,8 +36,8 @@ const SpeakerSection = () => {
           </div>
 
           {/* Image */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="rounded-[28px] overflow-hidden shadow-2xl border border-primary/10 bg-white animate-tilt-rise">
+          <div className="animate-swipe-right-strong" style={{ animationDelay: '0.1s' }}>
+            <div className="rounded-[28px] overflow-hidden shadow-2xl border border-primary/10 bg-white animate-tilt-rise animate-pop-glow">
               <img
                 src={zoomTraining}
                 alt="Тренинг ZOOM форматында"

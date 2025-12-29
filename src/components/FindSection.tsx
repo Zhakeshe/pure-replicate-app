@@ -24,7 +24,7 @@ const FindSection = () => {
 
   return (
     <section className="py-16 md:py-24 px-6 lg:px-16 bg-background">
-      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-center mb-12 md:mb-16 animate-fade-in">
+      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-center mb-12 md:mb-16 animate-swipe-left-strong">
         3 күнде <span className="text-primary">табасың:</span>
       </h2>
 
@@ -32,8 +32,8 @@ const FindSection = () => {
         {items.map((item, idx) => (
           <div
             key={item.number}
-            className="bg-primary rounded-2xl p-6 md:p-8 text-primary-foreground relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 animate-fade-in"
-            style={{ animationDelay: `${idx * 0.1}s` }}
+            className={`bg-primary rounded-2xl p-6 md:p-8 text-primary-foreground relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
+            style={{ animationDelay: `${idx * 0.08}s` }}
           >
             {/* Decorative dots */}
             <div className="absolute top-5 right-5 flex gap-1.5">

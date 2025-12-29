@@ -4,85 +4,72 @@ import speakerPhoto from "@/assets/speaker-photo.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden">
+    <section className="relative min-h-screen bg-background text-foreground">
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        {/* Hero with red background and photo */}
-        <div className="relative bg-primary">
-          {/* Top info bar */}
-          <div className="flex items-center justify-center gap-6 py-4 px-4 text-primary-foreground/90 text-sm">
+        <div className="relative bg-primary text-primary-foreground pb-10">
+          <div className="flex items-center justify-center gap-4 px-6 pt-4 text-sm tracking-tight uppercase">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
-              <span><strong>20-22</strong> қаңтар</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground" />
+              <span className="font-semibold">20-22</span>
+              <span className="text-primary-foreground/80">қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full" />
-              <span>онлайн ZOOM</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground" />
+              <span className="text-primary-foreground/90">онлайн</span>
+              <span className="font-semibold">ZOOM</span>
             </div>
           </div>
 
-          {/* Title */}
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary-foreground px-6 tracking-tight uppercase italic">
+          <h1 className="px-6 pt-6 text-center font-display text-5xl font-extrabold uppercase tracking-[0.14em] leading-tight">
             АУТЕНТИЧНОСТЬ
           </h1>
-          
-          {/* Speaker image with red background */}
-          <div className="relative mt-2">
+
+          <div className="relative mt-6 flex justify-center">
+            <div className="absolute inset-0 bg-primary" aria-hidden />
             <img
               src={speakerPhoto}
               alt="Құлан Мектепберген"
-              className="w-full h-[55vh] object-cover object-top"
+              className="relative z-10 h-[55vh] w-full max-w-2xl object-contain object-top drop-shadow-[0_24px_40px_rgba(0,0,0,0.35)] mix-blend-multiply"
             />
           </div>
         </div>
 
-        {/* Content below image */}
-        <div className="bg-background px-6 py-8 space-y-6">
-          <p className="text-foreground text-base leading-relaxed">
+        <div className="space-y-6 bg-background px-6 py-10">
+          <p className="text-base leading-relaxed text-foreground/90">
             Әр адамның бақытты ететін ісі бар. <strong>Өзіңдікін тап.</strong> «Керек», «болады» немесе «басқаларда істеп жатыр» дегенді емес.
           </p>
 
-          {/* Diagnostic badge */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Plus className="w-5 h-5 text-primary-foreground" />
+          <div className="flex items-center gap-3 rounded-2xl bg-secondary px-3 py-3 shadow-sm">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+              <Plus className="h-5 w-5" />
             </div>
-            <span className="text-foreground font-medium">психологиялық диагностика</span>
+            <span className="text-sm font-semibold text-foreground">психологиялық диагностика</span>
           </div>
 
-          {/* Stats */}
-          <div className="flex gap-12 pt-4">
+          <div className="flex gap-10 pt-2">
             <div>
-              <div className="text-primary font-display text-4xl font-bold italic">
-                3 күн
-              </div>
-              <p className="text-muted-foreground text-sm mt-1">
-                тренинг ұзақтығы<br />Құлан Мектепберген
-              </p>
+              <div className="font-display text-4xl font-bold italic text-primary">3 күн</div>
+              <p className="mt-2 text-sm text-muted-foreground">тренинг ұзақтығы<br />Құлан Мектепберген</p>
             </div>
             <div>
-              <div className="text-primary font-display text-4xl font-bold italic">
-                30+
-              </div>
-              <p className="text-muted-foreground text-sm mt-1">
-                сағат тірі жұмыс<br />өз ісіңмен және күйіңмен
-              </p>
+              <div className="font-display text-4xl font-bold italic text-primary">30+</div>
+              <p className="mt-2 text-sm text-muted-foreground">сағат тірі жұмыс<br />өз ісіңмен және күйіңмен</p>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-3 pt-4">
+          <div className="flex gap-3 pt-2">
             <Button
               size="lg"
-              className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-6 rounded-2xl"
-              onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
+              className="flex-1 rounded-2xl bg-primary px-6 py-6 text-base font-semibold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:bg-primary/90"
+              onClick={() => window.open("https://l.clck.bar/813189", "_blank")}
             >
               Қатысамын
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="flex-1 border-border bg-background text-foreground hover:bg-muted font-medium py-6 rounded-2xl"
+              className="flex-1 rounded-2xl border border-border bg-white px-6 py-6 text-base font-semibold text-foreground transition hover:-translate-y-0.5 hover:bg-muted"
             >
               Толығырақ білу
             </Button>
@@ -90,85 +77,76 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Desktop Layout - 50/50 split */}
-      <div className="hidden lg:grid grid-cols-2 min-h-screen">
-        {/* Left side - Content on white background */}
-        <div className="flex flex-col justify-center px-12 xl:px-20 py-12 bg-background">
-          {/* Top info bar */}
-          <div className="flex items-center gap-6 mb-8 text-foreground text-sm">
+      {/* Desktop Layout */}
+      <div className="hidden min-h-screen grid-cols-[1.05fr_0.95fr] bg-background lg:grid">
+        <div className="flex flex-col justify-center gap-8 px-12 py-14 xl:px-20">
+          <div className="flex items-center gap-6 text-sm uppercase tracking-[0.12em] text-foreground">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span><strong className="text-primary">20-22</strong> қаңтар</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span>
+                <strong className="text-primary">20-22</strong> қаңтар
+              </span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span>онлайн <strong className="text-primary">ZOOM</strong></span>
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span>
+                онлайн <strong className="text-primary">ZOOM</strong>
+              </span>
             </div>
           </div>
 
-          {/* Title */}
-          <h1 className="font-display text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary tracking-tight uppercase italic mb-6 animate-fade-in">
-            АУТЕНТИЧНОСТЬ
-          </h1>
+          <div className="max-w-xl space-y-6">
+            <h1 className="font-display text-7xl font-extrabold uppercase leading-[0.95] tracking-[0.14em] text-primary xl:text-8xl">
+              АУТЕНТИЧНОСТЬ
+            </h1>
 
-          {/* Description */}
-          <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Әр адамның бақытты ететін ісі бар. <strong>Өзіңдікін тап.</strong> «Керек», «болады» немесе «басқаларда істеп жатыр» дегенді емес.
-          </p>
+            <p className="text-lg leading-relaxed text-foreground/90">
+              Әр адамның бақытты ететін ісі бар. <strong>Өзіңдікін тап.</strong> «Керек», «болады» немесе «басқаларда істеп жатыр» дегенді емес.
+            </p>
 
-          {/* Diagnostic badge */}
-          <div className="flex items-center gap-3 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Plus className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-foreground font-medium">психологиялық диагностика</span>
-          </div>
-
-          {/* Stats */}
-          <div className="flex gap-16 mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div>
-              <div className="text-primary font-display text-5xl font-bold italic">
-                3 күн
+            <div className="flex items-center gap-3 rounded-2xl bg-secondary px-4 py-3 shadow-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+                <Plus className="h-5 w-5" />
               </div>
-              <p className="text-muted-foreground text-sm mt-2">
-                тренинг ұзақтығы<br />Құлан Мектепберген
-              </p>
+              <span className="text-sm font-semibold text-foreground">психологиялық диагностика</span>
             </div>
-            <div>
-              <div className="text-primary font-display text-5xl font-bold italic">
-                30+
-              </div>
-              <p className="text-muted-foreground text-sm mt-2">
-                сағат тірі жұмыс<br />өз ісіңмен және күйіңмен
-              </p>
-            </div>
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
-            >
-              Қатысамын
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border bg-background text-foreground hover:bg-muted font-medium px-10 py-7 text-base rounded-2xl hover:scale-105 transition-all duration-300"
-            >
-              Толығырақ білу
-            </Button>
+            <div className="flex gap-16">
+              <div>
+                <div className="font-display text-5xl font-bold italic text-primary">3 күн</div>
+                <p className="mt-2 text-sm text-muted-foreground">тренинг ұзақтығы<br />Құлан Мектепберген</p>
+              </div>
+              <div>
+                <div className="font-display text-5xl font-bold italic text-primary">30+</div>
+                <p className="mt-2 text-sm text-muted-foreground">сағат тірі жұмыс<br />өз ісіңмен және күйіңмен</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 pt-2">
+              <Button
+                size="lg"
+                className="rounded-2xl bg-primary px-10 py-7 text-base font-semibold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl"
+                onClick={() => window.open("https://l.clck.bar/813189", "_blank")}
+              >
+                Қатысамын
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-2xl border border-border bg-white px-10 py-7 text-base font-semibold text-foreground transition hover:-translate-y-0.5 hover:bg-muted"
+              >
+                Толығырақ білу
+              </Button>
+            </div>
           </div>
         </div>
 
-        {/* Right side - Speaker Photo on RED background */}
-        <div className="relative bg-primary flex items-end justify-center overflow-hidden">
+        <div className="relative flex items-center justify-center bg-primary">
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary via-primary/70 to-transparent" aria-hidden />
           <img
             src={speakerPhoto}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="w-full h-full object-cover object-top"
+            className="relative z-10 h-[88vh] w-full max-w-[900px] object-contain object-top drop-shadow-[0_32px_52px_rgba(0,0,0,0.35)] mix-blend-multiply"
           />
         </div>
       </div>

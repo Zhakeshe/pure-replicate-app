@@ -8,8 +8,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-16 md:py-24 px-6 lg:px-16 bg-foreground text-background">
-      <div className="max-w-6xl mx-auto">
+    <footer className="py-16 md:py-24 px-6 lg:px-16 bg-foreground text-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_18%_28%,rgba(255,255,255,0.08),transparent_32%),radial-gradient(circle_at_78%_24%,rgba(255,255,255,0.08),transparent_30%),radial-gradient(circle_at_52%_82%,rgba(255,255,255,0.06),transparent_30%)] animate-parallax-soft" />
+      <div className="max-w-6xl mx-auto relative">
         {/* Scientific basis section */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-swipe-left-strong">
@@ -23,7 +24,11 @@ const Footer = () => {
           <div className="mb-8 animate-rise-bloom" style={{ animationDelay: '0.2s' }}>
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4">
               {scientists.map((scientist, idx) => (
-                <span key={idx} className="text-background/80 text-lg md:text-xl">
+                <span
+                  key={idx}
+                  className="text-background/80 text-lg md:text-xl animate-swipe-left-strong"
+                  style={{ animationDelay: `${idx * 0.06 + 0.25}s` }}
+                >
                   {scientist.name}{idx < scientists.length - 1 ? "," : ""}
                 </span>
               ))}

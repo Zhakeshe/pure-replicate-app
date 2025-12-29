@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useState } from "react";
 
 const TariffsSection = () => {
+  const [showReceiptCta, setShowReceiptCta] = useState(false);
+
   const tariff = {
     name: "Өзіңді тануға алғашқы қадам жаса",
     price: "5 000 ₸",
@@ -57,10 +60,23 @@ const TariffsSection = () => {
           <Button
             size="lg"
             className="w-full bg-background text-primary hover:bg-background/90 font-medium py-7 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-            onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
+            onClick={() => {
+              setShowReceiptCta(true);
+              window.open("https://pay.kaspi.kz/pay/xfcntdmf", "_blank");
+            }}
           >
-            Қатысамын
+            Төлеу
           </Button>
+
+          {showReceiptCta && (
+            <Button
+              size="lg"
+              className="mt-4 w-full bg-green-500 text-white hover:bg-green-600 font-medium py-7 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open("https://l.clck.bar/813189", "_blank")}
+            >
+              Чек жіберу
+            </Button>
+          )}
         </div>
       </div>
     </section>

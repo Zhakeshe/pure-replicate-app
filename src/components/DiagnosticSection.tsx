@@ -10,8 +10,9 @@ const DiagnosticSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-muted/20">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 md:py-24 px-6 lg:px-16 bg-muted/20 relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_18%_20%,rgba(128,0,16,0.05),transparent_30%),radial-gradient(circle_at_82%_30%,rgba(128,0,16,0.04),transparent_30%),radial-gradient(circle_at_60%_80%,rgba(128,0,16,0.05),transparent_26%)] animate-parallax-soft" />
+      <div className="max-w-6xl mx-auto relative">
         {/* Two column layout for test section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Text content */}
@@ -38,7 +39,7 @@ const DiagnosticSection = () => {
             {levels.map((level, idx) => (
               <div
                 key={idx}
-                className={`${level.color} rounded-2xl p-6 min-h-[170px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-sm`}
+                className={`${level.color} rounded-2xl p-6 min-h-[170px] flex flex-col justify-between hover:scale-[1.04] transition-transform duration-500 shadow-lg animate-tilt-rise`}
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <div className="flex items-center justify-between">
@@ -76,11 +77,11 @@ const DiagnosticSection = () => {
         {/* 18 бағдарлама section with P18 image */}
         <div className="grid lg:grid-cols-2 gap-12 items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
           {/* Left - P18 Levels Image */}
-          <div className="bg-card border border-border rounded-3xl p-4 md:p-6 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-card border border-border rounded-3xl p-4 md:p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-500 animate-tilt-rise">
             <img
               src={p18Levels}
               alt="P18 барлық нәтижелер деңгейлері"
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto rounded-2xl animate-float-pulse"
             />
           </div>
 

@@ -33,17 +33,18 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 md:py-24 px-6 lg:px-16 bg-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_15%_30%,rgba(128,0,16,0.08),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(128,0,16,0.06),transparent_30%),radial-gradient(circle_at_70%_85%,rgba(128,0,16,0.05),transparent_26%)] animate-parallax-soft" />
+      <div className="max-w-6xl mx-auto relative">
         {/* Section with image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Image */}
           <div className="animate-fade-in order-2 lg:order-1">
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl overflow-hidden shadow-2xl animate-tilt-rise">
               <img
                 src={zoomTraining}
                 alt="Тренинг ZOOM форматында"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover animate-float-pulse"
               />
             </div>
           </div>
@@ -82,7 +83,7 @@ const ProcessSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-fade-in"
+                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-fade-in animate-tilt-rise"
                 style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
               >
                 <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 shadow-lg`}>

@@ -122,6 +122,18 @@ Primary color: #800010 -> hsl(353, 100%, 25%)
     animation: floatSoft 8s ease-in-out infinite;
   }
 
+  .animate-float-pulse {
+    animation: floatPulse 7s ease-in-out infinite;
+  }
+
+  .animate-tilt-rise {
+    animation: tiltRise 1.1s ease forwards;
+  }
+
+  .animate-parallax-soft {
+    animation: parallaxSoft 16s ease-in-out infinite alternate;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -177,6 +189,55 @@ Primary color: #800010 -> hsl(353, 100%, 25%)
     100% {
       transform: translateY(0px) scale(1);
       filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.18));
+    }
+  }
+
+  @keyframes floatPulse {
+    0% {
+      transform: translateY(0) scale(1) rotate(-0.3deg);
+      filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.12));
+    }
+    25% {
+      transform: translateY(-12px) scale(1.02) rotate(0.5deg);
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18));
+    }
+    50% {
+      transform: translateY(6px) scale(1.01) rotate(-0.2deg);
+      filter: drop-shadow(0 24px 45px rgba(0, 0, 0, 0.2));
+    }
+    75% {
+      transform: translateY(-8px) scale(1.015) rotate(0.4deg);
+      filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.16));
+    }
+    100% {
+      transform: translateY(0) scale(1) rotate(-0.3deg);
+      filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.12));
+    }
+  }
+
+  @keyframes tiltRise {
+    0% {
+      opacity: 0;
+      transform: translateY(18px) scale(0.98) rotateX(4deg);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-4px) scale(1.01) rotateX(0deg);
+    }
+    100% {
+      transform: translateY(0) scale(1) rotateX(0deg);
+    }
+  }
+
+  @keyframes parallaxSoft {
+    0% {
+      transform: translate3d(-10px, -8px, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(6px, 12px, 0) scale(1.02);
+    }
+    100% {
+      transform: translate3d(12px, -6px, 0) scale(1.01);
     }
   }
 

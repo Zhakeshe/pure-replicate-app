@@ -16,7 +16,7 @@ const DiagnosticSection = () => {
         {/* Two column layout for test section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Text content */}
-          <div className="space-y-6 animate-swipe-left-strong">
+          <div className="space-y-6" data-animate-on-scroll="animate-swipe-left-strong">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Психологиялық<br />диагностика
             </h2>
@@ -35,12 +35,17 @@ const DiagnosticSection = () => {
           </div>
 
           {/* Right - Level cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-swipe-right-strong" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            data-animate-on-scroll="animate-swipe-right-strong"
+            data-animate-delay="0.2s"
+          >
             {levels.map((level, idx) => (
               <div
                 key={idx}
-                className={`${level.color} rounded-2xl p-6 min-h-[170px] flex flex-col justify-between hover:scale-[1.04] transition-transform duration-500 shadow-lg animate-tilt-rise`}
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                className={`${level.color} rounded-2xl p-6 min-h-[170px] flex flex-col justify-between hover:scale-[1.04] transition-transform duration-500 shadow-lg`}
+                data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
+                data-animate-delay={`${idx * 0.1 + 0.25}s`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex gap-1.5">
@@ -75,9 +80,17 @@ const DiagnosticSection = () => {
         </div>
 
         {/* 18 бағдарлама section with P18 image */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start animate-rise-bloom" style={{ animationDelay: '0.4s' }}>
+        <div
+          className="grid lg:grid-cols-2 gap-12 items-start"
+          data-animate-on-scroll="animate-rise-bloom"
+          data-animate-delay="0.4s"
+        >
           {/* Left - P18 Levels Image */}
-          <div className="bg-card border border-border rounded-3xl p-4 md:p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-500 animate-tilt-rise animate-swipe-left-strong">
+          <div
+            className="bg-card border border-border rounded-3xl p-4 md:p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-500"
+            data-animate-on-scroll="animate-tilt-rise animate-swipe-left-strong"
+            data-animate-delay="0.45s"
+          >
             <img
               src={p18Levels}
               alt="P18 барлық нәтижелер деңгейлері"
@@ -86,7 +99,7 @@ const DiagnosticSection = () => {
           </div>
 
           {/* Right - Text content */}
-          <div className="space-y-6 animate-swipe-right-strong">
+          <div className="space-y-6" data-animate-on-scroll="animate-swipe-right-strong" data-animate-delay="0.5s">
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
               18 бағдарлама <span className="text-primary">деңгейлері</span>
             </h3>

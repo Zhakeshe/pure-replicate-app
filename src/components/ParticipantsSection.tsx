@@ -70,21 +70,29 @@ const ParticipantsSection = () => {
     <section className="py-16 md:py-24 bg-muted relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_25%_30%,rgba(128,0,16,0.06),transparent_32%),radial-gradient(circle_at_70%_10%,rgba(128,0,16,0.05),transparent_28%),radial-gradient(circle_at_60%_80%,rgba(128,0,16,0.05),transparent_32%)] animate-parallax-soft" />
       <div className="px-6 lg:px-16 mb-10 md:mb-12 relative">
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center animate-rise-bloom">
+        <h2
+          className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center"
+          data-animate-on-scroll="animate-rise-bloom"
+        >
           Кімдерге <span className="text-primary">арналған?</span>
         </h2>
       </div>
 
       {/* Table format grid */}
       <div className="px-6 lg:px-16 max-w-6xl mx-auto relative">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          data-animate-on-scroll="animate-swipe-left-strong"
+          data-animate-delay="0.1s"
+        >
           {participants.map((participant, idx) => {
             const IconComponent = participant.Icon;
             return (
               <div
                 key={idx}
-                className={`bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 animate-tilt-rise group ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
-                style={{ animationDelay: `${idx * 0.05}s` }}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 group"
+                data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
+                data-animate-delay={`${idx * 0.05 + 0.15}s`}
               >
                 {/* Image placeholder with icon */}
                 <div className="h-32 md:h-40 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center relative">

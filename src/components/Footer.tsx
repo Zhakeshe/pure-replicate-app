@@ -13,21 +13,33 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto relative">
         {/* Scientific basis section */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-swipe-left-strong">
+          <h2
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            data-animate-on-scroll="animate-swipe-left-strong"
+          >
             <span className="bg-primary/80 px-4 py-1">БАҒДАРЛАМА НЕГІЗДЕЛГЕН</span>
           </h2>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 animate-swipe-right-strong" style={{ animationDelay: '0.1s' }}>
+          <h2
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12"
+            data-animate-on-scroll="animate-swipe-right-strong"
+            data-animate-delay="0.1s"
+          >
             <span className="bg-primary/80 px-4 py-1">ҒЫЛЫМИ ТЕОРИЯЛАР МЕН ИДЕЯЛАРҒА</span>
           </h2>
 
           {/* Scientists */}
-          <div className="mb-8 animate-rise-bloom" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="mb-8"
+            data-animate-on-scroll="animate-rise-bloom"
+            data-animate-delay="0.2s"
+          >
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4">
               {scientists.map((scientist, idx) => (
                 <span
                   key={idx}
-                  className="text-background/80 text-lg md:text-xl animate-swipe-left-strong"
-                  style={{ animationDelay: `${idx * 0.06 + 0.25}s` }}
+                  className="text-background/80 text-lg md:text-xl"
+                  data-animate-on-scroll="animate-swipe-left-strong"
+                  data-animate-delay={`${idx * 0.06 + 0.25}s`}
                 >
                   {scientist.name}{idx < scientists.length - 1 ? "," : ""}
                 </span>

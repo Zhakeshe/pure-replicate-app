@@ -7,8 +7,11 @@ import GallerySection from "@/components/GallerySection";
 import TariffsSection from "@/components/TariffsSection";
 import SpeakerSection from "@/components/SpeakerSection";
 import Footer from "@/components/Footer";
+import useScrollAnimations from "@/hooks/useScrollAnimations";
 
 const Index = () => {
+  useScrollAnimations();
+
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />

@@ -39,8 +39,12 @@ const ProcessSection = () => {
         {/* Section with image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Image */}
-          <div className="order-2 lg:order-1 animate-swipe-left-strong">
-            <div className="rounded-3xl overflow-hidden shadow-2xl animate-tilt-rise animate-pop-glow">
+          <div className="order-2 lg:order-1" data-animate-on-scroll="animate-swipe-left-strong">
+            <div
+              className="rounded-3xl overflow-hidden shadow-2xl"
+              data-animate-on-scroll="animate-tilt-rise animate-pop-glow"
+              data-animate-delay="0.05s"
+            >
               <img
                 src={zoomTraining}
                 alt="Тренинг ZOOM форматында"
@@ -50,7 +54,11 @@ const ProcessSection = () => {
           </div>
 
           {/* Right - Title and description */}
-          <div className="order-1 lg:order-2 animate-swipe-right-strong" style={{ animationDelay: '0.1s' }}>
+          <div
+            className="order-1 lg:order-2"
+            data-animate-on-scroll="animate-swipe-right-strong"
+            data-animate-delay="0.1s"
+          >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Тренинг қалай{" "}
               <span className="text-primary">өтеді?</span>
@@ -73,7 +81,10 @@ const ProcessSection = () => {
         </div>
 
         {/* Program cards */}
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-rise-bloom">
+        <h3
+          className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center"
+          data-animate-on-scroll="animate-rise-bloom"
+        >
           3 күндік тренинг <span className="text-primary">бағдарламасы:</span>
         </h3>
 
@@ -83,8 +94,9 @@ const ProcessSection = () => {
             return (
               <div
                 key={idx}
-                className={`bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
-                style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
+                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
+                data-animate-delay={`${idx * 0.1 + 0.2}s`}
               >
                 <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 shadow-lg`}>
                   <IconComponent className="w-7 h-7 md:w-8 md:h-8 text-primary-foreground" />
@@ -100,7 +112,11 @@ const ProcessSection = () => {
           })}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          data-animate-on-scroll="animate-fade-in"
+          data-animate-delay="0.5s"
+        >
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-10 py-7 rounded-2xl hover:scale-105 transition-all duration-300"

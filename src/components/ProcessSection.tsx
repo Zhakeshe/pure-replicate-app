@@ -63,7 +63,7 @@ const ProcessSection = () => {
         </div>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center w-fit mx-auto"
           data-animate-on-scroll="animate-pop-glow"
           data-animate-delay="0.5s"
         >

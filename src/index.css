@@ -50,6 +50,10 @@ Primary color: #800010 -> hsl(353, 100%, 25%)
     --sidebar-ring: 353 100% 35%;
   }
 
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
+
   .dark {
     --background: 355 40% 12%;
     --foreground: 0 0% 95%;

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Theater, Heart, Flower2 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
-import zoomTraining from "@/assets/zoom-training.jpg";
 
 interface ProgramItem {
   Icon: LucideIcon;
@@ -33,60 +32,22 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-background relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_15%_30%,rgba(128,0,16,0.08),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(128,0,16,0.06),transparent_30%),radial-gradient(circle_at_70%_85%,rgba(128,0,16,0.05),transparent_26%)] animate-parallax-soft" />
+    <section className="py-16 md:py-24 px-6 lg:px-16 bg-[#f6eed5] relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(128,0,16,0.08),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(128,0,16,0.06),transparent_28%),radial-gradient(circle_at_70%_85%,rgba(128,0,16,0.05),transparent_26%)]" />
       <div className="max-w-6xl mx-auto relative">
-        {/* Section with image */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left - Image */}
-          <div className="order-2 lg:order-1" data-animate-on-scroll="animate-swipe-left-strong">
-            <div
-              className="rounded-3xl overflow-hidden shadow-2xl"
-              data-animate-on-scroll="animate-tilt-rise animate-pop-glow"
-              data-animate-delay="0.05s"
-            >
-              <img
-                src={zoomTraining}
-                alt="Тренинг ZOOM форматында"
-                className="w-full h-auto object-cover animate-float-pulse"
-              />
-            </div>
-          </div>
-
-          {/* Right - Title and description */}
-          <div
-            className="order-1 lg:order-2"
-            data-animate-on-scroll="animate-swipe-right-strong"
-            data-animate-delay="0.1s"
-          >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Тренинг қалай{" "}
-              <span className="text-primary">өтеді?</span>
-            </h2>
-            
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-6">
-              Онлайн ZOOM платформасында 3 күн бойы жүреді. Сен өміріңді сырттан емес, іштен өзгертуді бастайсың.
-            </p>
-
-            <div className="flex items-center gap-4 text-foreground">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">3</span>
-              </div>
-              <div>
-                <span className="font-semibold">күндік интенсив</span>
-                <p className="text-muted-foreground text-sm">20, 21, 22 қаңтар • 19:00-21:00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Program cards */}
-        <h3
-          className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center"
+        <h2
+          className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4"
           data-animate-on-scroll="animate-rise-bloom"
         >
           3 күндік тренинг <span className="text-primary">бағдарламасы:</span>
-        </h3>
+        </h2>
+        <p
+          className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 md:mb-14"
+          data-animate-on-scroll="animate-fade-in"
+          data-animate-delay="0.08s"
+        >
+          Онлайн ZOOM платформасында 3 күн бойы жүреді. Сен өміріңді сырттан емес, іштен өзгертуді бастайсың.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
           {program.map((item, idx) => {
@@ -94,19 +55,25 @@ const ProcessSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
-                data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
-                data-animate-delay={`${idx * 0.1 + 0.2}s`}
+                className="relative overflow-hidden rounded-3xl bg-[#a30016] text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-[#d4bdae]"
+                data-animate-on-scroll={`animate-swipe-up-strong animate-tilt-rise`}
+                data-animate-delay={`${idx * 0.12 + 0.1}s`}
               >
-                <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 shadow-lg`}>
-                  <IconComponent className="w-7 h-7 md:w-8 md:h-8 text-primary-foreground" />
+                <div className="absolute inset-x-6 top-5 flex justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[#f6eed5] text-primary font-semibold flex items-center justify-center shadow-md">
+                    {idx + 1}
+                  </div>
                 </div>
-                <h4 className="font-display text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">
-                  {item.title}
-                </h4>
-                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                  {item.description}
-                </p>
+
+                <div className="p-8 pt-16 flex flex-col gap-4">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center shadow-inner">
+                    <IconComponent className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="font-display text-lg md:text-xl font-semibold leading-snug text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm md:text-base leading-relaxed text-white/90">{item.description}</p>
+                </div>
               </div>
             );
           })}
@@ -114,7 +81,7 @@ const ProcessSection = () => {
 
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center"
-          data-animate-on-scroll="animate-fade-in"
+          data-animate-on-scroll="animate-pop-glow"
           data-animate-delay="0.5s"
         >
           <Button

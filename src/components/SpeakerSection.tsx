@@ -18,7 +18,7 @@ const SpeakerSection = () => {
             data-animate-on-scroll="animate-tilt-rise animate-swipe-left-strong"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[#810013] mb-6">
-              Спикер
+              Тренинг қалай өтеді ?
             </h2>
 
             <ul className="space-y-4 text-lg md:text-xl text-foreground mb-8 leading-relaxed">

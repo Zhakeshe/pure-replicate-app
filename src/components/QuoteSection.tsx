@@ -27,8 +27,8 @@ const QuoteSection = () => {
                 />
               </div>
               <div className="leading-snug">
-                <div className="text-base md:text-lg font-semibold">Құлан Мектеберген</div>
-                <div className="text-sm md:text-base text-[#8a0f27]">Бағдарлама авторы</div>
+                <div className="text-base md:text-lg font-semibold">Құлан Мектепберген</div>
+                <div className="text-sm md:text-base text-[#8a0f27]">коуч, тренер</div>
               </div>
             </div>
 

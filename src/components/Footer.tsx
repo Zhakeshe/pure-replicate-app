@@ -62,7 +62,7 @@ const Footer = () => {
             />
           </div>
           <p className="text-sm text-background mb-2">
-            © 2025 Құлан Мектепберген
+            © 2026 Құлан Мектепберген
           </p>
           <p className="text-sm text-background">
             @kulanman

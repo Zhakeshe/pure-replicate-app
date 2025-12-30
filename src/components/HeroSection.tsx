@@ -67,17 +67,19 @@ const HeroSection = () => {
 
           {/* Speaker image */}
           <div className="relative mt-3 px-6" data-animate-on-scroll="animate-swipe-right-strong">
-            <img
-              src={SPEAKER_IMAGE_URL}
-              alt="Құлан Мектепберген"
-              className="w-full h-[320px] object-contain object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
-              onError={(event) => {
-                const img = event.currentTarget;
-                if (img.dataset.fallbackApplied === "true") return;
-                img.dataset.fallbackApplied = "true";
-                img.src = SPEAKER_IMAGE_FALLBACK_URL;
-              }}
-            />
+            <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-[32px] p-4 shadow-[0_24px_48px_rgba(0,0,0,0.38)]">
+              <img
+                src={SPEAKER_IMAGE_URL}
+                alt="Құлан Мектепберген"
+                className="w-full h-[340px] object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                onError={(event) => {
+                  const img = event.currentTarget;
+                  if (img.dataset.fallbackApplied === "true") return;
+                  img.dataset.fallbackApplied = "true";
+                  img.src = SPEAKER_IMAGE_FALLBACK_URL;
+                }}
+              />
+            </div>
           </div>
         </div>
 
@@ -213,17 +215,19 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
-          <img
-            src={SPEAKER_IMAGE_URL}
-            alt="Құлан Мектепберген - тренинг спикері"
-            className="relative max-w-[820px] w-full h-full max-h-[900px] xl:max-h-[960px] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
-            onError={(event) => {
-              const img = event.currentTarget;
-              if (img.dataset.fallbackApplied === "true") return;
-              img.dataset.fallbackApplied = "true";
-              img.src = SPEAKER_IMAGE_FALLBACK_URL;
-            }}
-          />
+          <div className="relative max-w-[840px] w-full h-full max-h-[900px] xl:max-h-[960px] px-10 py-8 bg-white/8 border border-white/12 rounded-[52px] backdrop-blur-sm shadow-[0_36px_72px_rgba(0,0,0,0.32)]">
+            <img
+              src={SPEAKER_IMAGE_URL}
+              alt="Құлан Мектепберген - тренинг спикері"
+              className="w-full h-full object-contain object-center drop-shadow-[0_26px_56px_rgba(0,0,0,0.36)]"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (img.dataset.fallbackApplied === "true") return;
+                img.dataset.fallbackApplied = "true";
+                img.src = SPEAKER_IMAGE_FALLBACK_URL;
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ export const SPEAKER_BACKGROUND_URL =
   "https://static.tildacdn.com/tild6233-6662-4661-b730-373863663463/-min.png";
 
 export const SPEAKER_IMAGE_URL =
-  "https://i.postimg.cc/T1t02HN9/1W6A6693-resized-(1)-no-bg-HD-(carve-photos).png";
+  "https://i.postimg.cc/q7Bp1by6/1W6A6693-resized-(1)-no-bg-HD-(carve-photos)-fotor-20251230201923.png";
 
 export const QUOTE_AUTHOR_IMAGE_URL =
   "https://optim.tildacdn.ink/tild6335-3135-4739-a464-623634353638/-/resize/160x/-/format/webp/image-removebg-previ.png.webp";

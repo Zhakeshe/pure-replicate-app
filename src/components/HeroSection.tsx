@@ -41,30 +41,31 @@ const HeroSection = () => {
           </div>
 
           {/* Title */}
-          <h1 className="relative px-6 pt-1" data-animate-on-scroll="animate-rise-bloom">
+          <div
+            className="relative flex justify-center pt-1"
+            data-animate-on-scroll="animate-rise-bloom"
+          >
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-14 w-auto md:h-16 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
               style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
             />
-          </h1>
+          </div>
 
           {/* Speaker image */}
           <div className="relative mt-6 px-4 pb-6" data-animate-on-scroll="animate-swipe-right-strong">
-            <div className="relative overflow-hidden rounded-[32px] shadow-2xl bg-white/5 border border-white/10">
-              <img
-                src={SPEAKER_IMAGE_URL}
-                alt="Құлан Мектепберген"
-                className="w-full h-[420px] object-cover object-top"
-                onError={(event) => {
-                  const img = event.currentTarget;
-                  if (img.dataset.fallbackApplied === "true") return;
-                  img.dataset.fallbackApplied = "true";
-                  img.src = SPEAKER_IMAGE_FALLBACK_URL;
-                }}
-              />
-            </div>
+            <img
+              src={SPEAKER_IMAGE_URL}
+              alt="Құлан Мектепберген"
+              className="w-full h-[420px] object-cover object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (img.dataset.fallbackApplied === "true") return;
+                img.dataset.fallbackApplied = "true";
+                img.src = SPEAKER_IMAGE_FALLBACK_URL;
+              }}
+            />
           </div>
         </div>
 

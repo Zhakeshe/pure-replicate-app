@@ -11,11 +11,10 @@ const DiagnosticSection = () => {
           {/* Left - Text content */}
           <div className="space-y-6" data-animate-on-scroll="animate-swipe-left-strong">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Психологиялық<br />диагностика
+              P18 тестімен өзіңнің психо-эмоционалдық жағдайыңды бірден біле аласың:
             </h2>
 
             <div className="space-y-4 text-foreground/80 text-lg md:text-xl leading-relaxed">
-              <p>P18 тестімен өзіңнің психо-эмоционалдық жағдайыңды бірден біле аласың:</p>
               <ul className="list-decimal list-inside space-y-2 text-base md:text-lg">
                 <li>Ішкі күйіңді көрсетеді</li>
                 <li>Қай жерде қиындықтар барын анықтайды</li>

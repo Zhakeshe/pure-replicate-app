@@ -130,19 +130,29 @@ const HeroSection = () => {
             className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
-          {/* Top info bar */}
-          <div
-            className="flex items-center gap-7 mb-10 text-primary text-sm tracking-[0.08em] uppercase"
-            data-animate-on-scroll="animate-rise-bloom"
-            data-animate-delay="0.05s"
-          >
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span className="font-semibold">20-22 қаңтар</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-              <span className="font-semibold">онлайн ZOOM</span>
+            <h1 className="mb-10" data-animate-on-scroll="animate-fade-in">
+              <img
+                src={AUTHENTICITY_LOGO_URL}
+                alt="Аутентичность логотип"
+                className="h-24 w-auto xl:h-28 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
+                style={{ filter: AUTHENTICITY_LOGO_FILTER }}
+              />
+            </h1>
+
+            {/* Top info bar */}
+            <div
+              className="flex items-center gap-7 mb-10 text-primary text-sm tracking-[0.08em] uppercase"
+              data-animate-on-scroll="animate-rise-bloom"
+              data-animate-delay="0.05s"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                <span className="font-semibold">20-22 қаңтар</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                <span className="font-semibold">онлайн ZOOM</span>
+              </div>
             </div>
           </div>
 
@@ -155,45 +165,55 @@ const HeroSection = () => {
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
-          {/* Highlighted duration */}
-          <div
-            className="flex gap-20 mb-12 mt-6"
-            data-animate-on-scroll="animate-rise-bloom"
-            data-animate-delay="0.2s"
-          >
-            <div>
-              <div className="font-display text-6xl font-bold text-primary">
-                3 күн
+            {/* Description */}
+            <p
+              className="text-primary text-2xl leading-relaxed mb-10 max-w-xl"
+              data-animate-on-scroll="animate-fade-in"
+              data-animate-delay="0.1s"
+            >
+              Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
+            </p>
+
+            {/* Highlighted duration */}
+            <div
+              className="flex gap-20 mb-12 mt-6"
+              data-animate-on-scroll="animate-rise-bloom"
+              data-animate-delay="0.2s"
+            >
+              <div>
+                <div className="font-display text-6xl font-bold text-primary">
+                  3 күн
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* CTA Buttons */}
-          <div
-            className="flex gap-5 mt-4"
-            data-animate-on-scroll="animate-rise-bloom"
-            data-animate-delay="0.4s"
-          >
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02]"
-              onClick={() => handleScrollTo("tariff")}
+            {/* CTA Buttons */}
+            <div
+              className="flex gap-5 mt-4"
+              data-animate-on-scroll="animate-rise-bloom"
+              data-animate-delay="0.4s"
             >
-              Қатысамын
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className={`border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300 ${isProgramScrolling ? "animate-bounce" : ""}`}
-              onClick={() => handleScrollTo("program", true)}
-            >
-              Толығырақ білу
-            </Button>
-          </div>
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => handleScrollTo("tariff")}
+              >
+                Қатысамын
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className={`border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300 ${isProgramScrolling ? "animate-bounce" : ""}`}
+                onClick={() => handleScrollTo("program", true)}
+              >
+                Толығырақ білу
+              </Button>
+            </div>
         </div>
 
         {/* Right side - Speaker Photo on RED background */}
         <div
+          className="relative flex items-end justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
@@ -205,6 +225,11 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
+          <div className="relative max-w-[900px] w-full h-full px-10 pt-10 pb-0 flex items-end justify-center">
+            <img
+              src={SPEAKER_IMAGE_URL}
+              alt="Құлан Мектепберген - тренинг спикері"
+              className="w-full h-full max-h-[960px] object-cover object-bottom scale-[1.08] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
           <div className="relative max-w-[900px] w-full h-full px-10 py-12 flex items-center justify-center">
             <img
               src={SPEAKER_IMAGE_URL}

@@ -117,7 +117,7 @@ const HeroSection = () => {
         <div className="hidden lg:grid grid-cols-2 items-stretch bg-white text-primary min-h-[900px] xl:min-h-[960px]">
           {/* Left side - Content on tinted background */}
           <div
-            className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-20 bg-white text-primary"
+            className="flex flex-col justify-center lg:justify-start px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
           {/* Top info bar */}

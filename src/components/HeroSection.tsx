@@ -9,7 +9,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden font-sans bg-white text-primary lg:pt-0 lg:pb-10">
+    <section className="relative overflow-hidden font-sans bg-white text-primary lg:pt-0 lg:pb-0">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
-              className="relative w-full h-[55vh] object-cover object-top animate-float-soft"
+              className="relative w-full h-[55vh] object-cover object-top"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;
@@ -182,7 +182,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[720px] lg:pt-0 lg:pb-10"
+          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[720px] lg:pt-0 lg:pb-0"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -196,7 +196,7 @@ const HeroSection = () => {
           <img
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="relative max-w-[820px] w-full h-[720px] max-h-[820px] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] animate-float-soft"
+            className="relative max-w-[820px] w-full h-[720px] max-h-[820px] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
             onError={(event) => {
               const img = event.currentTarget;
               if (img.dataset.fallbackApplied === "true") return;

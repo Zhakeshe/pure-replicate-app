@@ -63,18 +63,7 @@ const ProcessSection = () => {
           })}
         </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center w-fit mx-auto"
-          data-animate-on-scroll="animate-pop-glow"
-          data-animate-delay="0.5s"
-        >
-          <Button
-            size="lg"
-            className="bg-transparent border border-primary text-primary font-medium px-10 py-7 rounded-2xl hover:bg-primary/10 hover:scale-105 transition-all duration-300"
-            onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
-          >
-            Қатысамын
-          </Button>
+    
         </div>
       </div>
     </section>

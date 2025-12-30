@@ -19,8 +19,6 @@ const results = [
   { percent: "100%", status: "Өте жоғары", label: "Өзін жою", color: "#e84436" },
   { percent: "84%", status: "Өте жоғары", label: "Дисциплина жоқтығы", color: "#f5822e" },
   { percent: "12%", status: "Төмен", label: "Кем сезіну", color: "#2bbf63" },
-  { percent: "52%", status: "Жоғары", label: "Пессимизм", color: "#f5832e" },
-  { percent: "60%", status: "Жоғары", label: "Ережелер", color: "#f48b2f" },
 ];
 
 const ResultsSection = () => {

@@ -1,4 +1,5 @@
 import zoomTraining from "@/assets/zoom-training.jpg";
+import { smoothScrollToSection } from "@/lib/scroll";
 
 const SpeakerSection = () => {
   const points = [
@@ -33,7 +34,7 @@ const SpeakerSection = () => {
             <button
               className="px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[#810013] text-white font-semibold text-base md:text-lg shadow-lg hover:scale-[1.02] transition-transform"
               data-animate-on-scroll="animate-pop-glow"
-              onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
+              onClick={() => smoothScrollToSection("tariff")}
             >
               Қатысамын
             </button>

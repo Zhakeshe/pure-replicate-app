@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
 import {
+  AUTHENTICITY_LOGO_FILTER,
   SPEAKER_BACKGROUND_URL,
   SPEAKER_IMAGE_URL,
   SPEAKER_IMAGE_FALLBACK_URL,
+  getAuthenticityLogoSrc,
 } from "@/lib/constants";
 import { smoothScrollToSection } from "@/lib/scroll";
 import { useState } from "react";
 
 const HeroSection = () => {
   const [isProgramScrolling, setIsProgramScrolling] = useState(false);
+  const logoSrc = getAuthenticityLogoSrc();
 
   const handleScrollTo = (id: string, withAnimation = false) => {
     smoothScrollToSection(
@@ -25,7 +28,6 @@ const HeroSection = () => {
         {/* Hero with red background and centered photo */}
         <div
           className="relative z-10 overflow-hidden pb-6 rounded-b-[42px] shadow-[0_20px_44px_rgba(128,0,0,0.3)]"
-          className="relative overflow-hidden pb-3 rounded-b-[36px]"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -57,7 +59,7 @@ const HeroSection = () => {
             data-animate-on-scroll="animate-rise-bloom"
           >
             <img
-              src={AUTHENTICITY_LOGO_URL}
+              src={logoSrc}
               alt="Аутентичность логотип"
               className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
               style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
@@ -132,7 +134,7 @@ const HeroSection = () => {
           >
             <h1 className="mb-10" data-animate-on-scroll="animate-fade-in">
               <img
-                src={AUTHENTICITY_LOGO_URL}
+                src={logoSrc}
                 alt="Аутентичность логотип"
                 className="h-24 w-auto xl:h-28 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
                 style={{ filter: AUTHENTICITY_LOGO_FILTER }}
@@ -154,16 +156,6 @@ const HeroSection = () => {
                 <span className="font-semibold">онлайн ZOOM</span>
               </div>
             </div>
-          </div>
-
-          {/* Description */}
-          <p
-            className="text-primary text-2xl leading-relaxed mb-10 max-w-xl"
-            data-animate-on-scroll="animate-fade-in"
-            data-animate-delay="0.1s"
-          >
-            Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
-          </p>
 
             {/* Description */}
             <p
@@ -214,7 +206,6 @@ const HeroSection = () => {
         {/* Right side - Speaker Photo on RED background */}
         <div
           className="relative flex items-end justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
-          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -230,12 +221,6 @@ const HeroSection = () => {
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген - тренинг спикері"
               className="w-full h-full max-h-[960px] object-cover object-bottom scale-[1.08] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
-            />
-          <div className="relative max-w-[900px] w-full h-full px-10 py-12 flex items-center justify-center">
-            <img
-              src={SPEAKER_IMAGE_URL}
-              alt="Құлан Мектепберген - тренинг спикері"
-              className="w-full h-full max-h-[940px] object-cover object-center scale-[1.06] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;

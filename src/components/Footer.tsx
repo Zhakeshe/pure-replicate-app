@@ -1,4 +1,10 @@
+import {
+  AUTHENTICITY_LOGO_FILTER,
+  getAuthenticityLogoSrc,
+} from "@/lib/constants";
+
 const Footer = () => {
+  const logoSrc = getAuthenticityLogoSrc();
   const scientists = [
     { name: "Джеффри Янг" },
     { name: "Джанет Клоско" },
@@ -51,6 +57,14 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-background/20">
+          <div className="font-display text-2xl font-bold text-primary mb-4 italic flex justify-center">
+            <img
+              src={logoSrc}
+              alt="Аутентичность логотип"
+              className="h-10 w-auto drop-shadow"
+              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
+            />
+          </div>
           <p className="text-sm text-background mb-2">
             © 2026 Құлан Мектепберген
           </p>

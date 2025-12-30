@@ -1,6 +1,16 @@
 export const AUTHENTICITY_LOGO_URL =
   "https://static.tildacdn.com/tild3036-3637-4665-b338-396130643065/MB_.svg";
 
+const AUTHENTICITY_LOGO_FALLBACK_URL = AUTHENTICITY_LOGO_URL;
+
+export const getAuthenticityLogoSrc = () => {
+  try {
+    return AUTHENTICITY_LOGO_URL || AUTHENTICITY_LOGO_FALLBACK_URL;
+  } catch {
+    return AUTHENTICITY_LOGO_FALLBACK_URL;
+  }
+};
+
 export const AUTHENTICITY_LOGO_FILTER =
   "brightness(0) saturate(100%) invert(12%) sepia(72%) saturate(4031%) hue-rotate(335deg) brightness(85%) contrast(105%)";
 

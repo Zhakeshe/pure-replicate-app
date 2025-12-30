@@ -194,7 +194,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-end justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
+          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -205,11 +205,11 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
-          <div className="relative max-w-[900px] w-full h-full px-10 pt-10 pb-0 flex items-end justify-center">
+          <div className="relative max-w-[900px] w-full h-full px-10 py-12 flex items-center justify-center">
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген - тренинг спикері"
-              className="w-full h-full max-h-[960px] object-cover object-bottom scale-[1.08] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+              className="w-full h-full max-h-[940px] object-cover object-center scale-[1.06] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;

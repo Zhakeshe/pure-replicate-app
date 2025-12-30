@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="lg:hidden">
         {/* Hero with red background and centered photo */}
         <div
-          className="relative overflow-hidden pb-3"
+          className="relative overflow-hidden pb-3 rounded-b-[36px]"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -61,7 +61,7 @@ const HeroSection = () => {
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
-              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
+              style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
             />
           </div>
 
@@ -125,7 +125,7 @@ const HeroSection = () => {
         <div className="hidden lg:grid grid-cols-2 items-stretch bg-white text-primary min-h-[900px] xl:min-h-[960px]">
           {/* Left side - Content on tinted background */}
           <div
-            className="flex flex-col justify-center lg:justify-start px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
+            className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
           {/* Top info bar */}
@@ -202,7 +202,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0"
+          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",

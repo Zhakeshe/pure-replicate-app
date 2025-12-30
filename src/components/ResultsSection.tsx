@@ -9,7 +9,7 @@ const results = [
   { percent: "100%", label: "Дәрменсіздік", color: "#d94743" },
   { percent: "64%", label: "Сәтсіздік", color: "#f5832e" },
   { percent: "100%", label: "Басқаруға еру", color: "#e84436" },
-  { percent: "64%", label: "Болжам", color: "#2db6aa" },
+  { percent: "64%", label: "Болжам", color: "#f5832e" },
   { percent: "80%", label: "Өзін құрбан ету", color: "#d94743" },
   { percent: "100%", label: "Бағыну", color: "#e84436" },
   { percent: "64%", label: "Эмоцияны ұстау", color: "#f48b2f" },

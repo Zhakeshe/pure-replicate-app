@@ -14,15 +14,15 @@ const HeroSection = () => {
       <div className="lg:hidden">
         {/* Hero with red background and centered photo */}
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden pb-4"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.5) 100%), url(${SPEAKER_BACKGROUND_URL})`,
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
             backgroundPosition: "center top",
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/8 via-black/30 to-black/45" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_80%_15%,rgba(255,255,255,0.08),transparent_38%)] animate-gradient-pan" />
 
           {/* Top info bar */}
@@ -48,17 +48,17 @@ const HeroSection = () => {
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-14 w-auto md:h-16 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
+              className="h-[76px] w-auto md:h-20 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
               style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
             />
           </div>
 
           {/* Speaker image */}
-          <div className="relative mt-6 px-4 pb-6" data-animate-on-scroll="animate-swipe-right-strong">
+          <div className="relative mt-4 px-4" data-animate-on-scroll="animate-swipe-right-strong">
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
-              className="w-full h-[420px] object-cover object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
+              className="w-full h-[360px] object-cover object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;
@@ -67,25 +67,21 @@ const HeroSection = () => {
               }}
             />
           </div>
-        </div>
 
-        {/* Content below image */}
-        <div className="bg-white px-6 py-10 space-y-7 text-primary" data-animate-on-scroll="animate-rise-bloom">
-          <p className="text-[15px] leading-7 tracking-[0.01em] text-primary">
-            Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
-          </p>
-
-          {/* Highlighted duration */}
-          <div className="flex items-center gap-12 pt-4 text-primary" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
-            <div>
-              <div className="font-display text-4xl font-bold text-primary">
-                3 күн
-              </div>
+          {/* Copy over the speaker background */}
+          <div className="relative px-6 pt-6 pb-5 text-white space-y-4" data-animate-on-scroll="animate-rise-bloom">
+            <p className="text-[16px] leading-7 tracking-[0.01em]">
+              Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
+            </p>
+            <div className="flex items-center gap-12">
+              <div className="font-display text-4xl font-bold">3 күн</div>
             </div>
           </div>
+        </div>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-3 pt-4" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.1s">
+        {/* CTA Buttons below the background */}
+        <div className="bg-white px-6 py-8" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
+          <div className="flex gap-3">
             <Button
               size="lg"
               className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"

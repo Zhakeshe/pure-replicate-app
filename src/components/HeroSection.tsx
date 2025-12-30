@@ -12,58 +12,59 @@ const HeroSection = () => {
     <section className="relative overflow-hidden font-sans bg-white text-primary lg:pt-0 lg:pb-0">
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        {/* Hero with red background and photo */}
-        <div className="relative bg-white">
+        {/* Hero with red background and centered photo */}
+        <div
+          className="relative overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.5) 100%), url(${SPEAKER_BACKGROUND_URL})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/45" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_80%_15%,rgba(255,255,255,0.08),transparent_38%)] animate-gradient-pan" />
+
           {/* Top info bar */}
           <div
-            className="flex items-center justify-center gap-6 py-4 px-4 text-primary text-[13px] tracking-wide uppercase"
+            className="relative flex items-center justify-center gap-6 py-4 px-4 text-white text-[13px] tracking-wide uppercase"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               <span className="font-semibold">20-22 қаңтар</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
 
           {/* Title */}
-          <h1 className="px-6 pt-1" data-animate-on-scroll="animate-rise-bloom">
+          <h1 className="relative px-6 pt-1" data-animate-on-scroll="animate-rise-bloom">
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-14 w-auto md:h-16 drop-shadow"
-              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
+              className="h-14 w-auto md:h-16 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
+              style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
             />
           </h1>
-          
-          {/* Speaker image with light background */}
-          <div
-            className="relative mt-2 rounded-[32px] overflow-hidden shadow-2xl"
-            style={{
-              backgroundImage: `url(${SPEAKER_BACKGROUND_URL})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              backgroundRepeat: "no-repeat",
-            }}
-            data-animate-on-scroll="animate-swipe-right-strong"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-primary/10 animate-gradient-pan" />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/40" />
-            <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/40 to-transparent" />
-            <img
-              src={SPEAKER_IMAGE_URL}
-              alt="Құлан Мектепберген"
-              className="relative w-full h-[55vh] object-cover object-top"
-              onError={(event) => {
-                const img = event.currentTarget;
-                if (img.dataset.fallbackApplied === "true") return;
-                img.dataset.fallbackApplied = "true";
-                img.src = SPEAKER_IMAGE_FALLBACK_URL;
-              }}
-            />
+
+          {/* Speaker image */}
+          <div className="relative mt-6 px-4 pb-6" data-animate-on-scroll="animate-swipe-right-strong">
+            <div className="relative overflow-hidden rounded-[32px] shadow-2xl bg-white/5 border border-white/10">
+              <img
+                src={SPEAKER_IMAGE_URL}
+                alt="Құлан Мектепберген"
+                className="w-full h-[420px] object-cover object-top"
+                onError={(event) => {
+                  const img = event.currentTarget;
+                  if (img.dataset.fallbackApplied === "true") return;
+                  img.dataset.fallbackApplied = "true";
+                  img.src = SPEAKER_IMAGE_FALLBACK_URL;
+                }}
+              />
+            </div>
           </div>
         </div>
 

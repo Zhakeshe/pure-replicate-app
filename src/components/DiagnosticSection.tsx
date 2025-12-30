@@ -14,14 +14,18 @@ const DiagnosticSection = () => {
               Психо-эмоционалдық диагностика
             </h2>
 
-            <div className="space-y-4 text-foreground/80 text-lg md:text-xl leading-relaxed">
-              <ul className="list-decimal list-inside space-y-2 text-base md:text-lg">
-                <h3>p18 тестімен:</h3>
-                <li>Ішкі күйіңді көрсетеді</li>
-                <li>Қай жерде қиындықтар барын анықтайды</li>
-                <li>Кәсіби маманмен жұмыс істеуге дайындық</li>
-              </ul>
-            </div>
+           <div className="space-y-4 text-foreground/80 text-lg md:text-xl leading-relaxed">
+             <h3 className="font-semibold text-base md:text-lg">
+               p18 тестімен:
+             </h3>
+
+             <ul className="list-decimal list-inside space-y-2 text-base md:text-lg">
+               <li>Ішкі күйіңді көрсетеді</li>
+               <li>Қай жерде қиындықтар барын анықтайды</li>
+               <li>Кәсіби маманмен жұмыс істеуге дайындық</li>
+             </ul>
+          </div>
+
 
             <Button
               size="lg"

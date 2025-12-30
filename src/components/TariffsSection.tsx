@@ -65,7 +65,7 @@ const TariffsSection = () => {
               window.open("https://pay.kaspi.kz/pay/xfcntdmf", "_blank");
             }}
           >
-            Төлеу
+            Төлем жасау
           </Button>
 
           {showReceiptCta && (

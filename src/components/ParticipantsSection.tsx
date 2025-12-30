@@ -79,11 +79,13 @@ const ParticipantsSection = () => {
         >
           {participants.map((participant, idx) => {
             const IconComponent = participant.Icon;
+            const direction = idx < 4 ? "animate-swipe-right-strong" : idx < 8 ? "animate-swipe-left-strong" : "animate-swipe-right-strong";
+
             return (
               <div
                 key={idx}
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 group"
-                data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? 'animate-swipe-left-strong' : 'animate-swipe-right-strong'}`}
+                data-animate-on-scroll={`animate-tilt-rise ${direction}`}
                 data-animate-delay={`${idx * 0.05 + 0.15}s`}
               >
                 {/* Image placeholder with icon */}

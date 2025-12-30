@@ -1,40 +1,32 @@
 import clsx from "clsx";
 
 const results = [
-  { percent: "32%", label: "Эмоциональная гибкость" },
-  { percent: "52%", label: "Осознанность тела" },
-  { percent: "76%", label: "Пайда" },
-  { percent: "82%", label: "Қабылдану" },
-  { percent: "41%", label: "Реакция неопределенности" },
-  { percent: "44%", label: "Уверенность в себе" },
-  { percent: "88%", label: "Самоконтроль" },
-  { percent: "48%", label: "Энергия" },
-  { percent: "47%", label: "Истощение" },
-  { percent: "76%", label: "Реакция усталости" },
-  { percent: "44%", label: "Личная дистанция" },
-  { percent: "88%", label: "Өзіндік құн" },
-  { percent: "36%", label: "Күрес" },
-  { percent: "40%", label: "Страх оценки" },
-  { percent: "86%", label: "Таңдау және әрекет" },
-  { percent: "46%", label: "Тәуелділік" },
-  { percent: "84%", label: "Вербализация" },
-  { percent: "84%", label: "Драматизация" },
-  { percent: "88%", label: "Иррациональность" },
-  { percent: "88%", label: "Сомнения" },
-];
-
-const colorBands = [
-  "from-amber-200 to-orange-200",
-  "from-amber-300 to-orange-300",
-  "from-orange-300 to-orange-400",
-  "from-orange-400 to-orange-500",
-  "from-orange-500 to-primary/90",
+  { percent: "16%", status: "Төмен", label: "Эмоционалды аштық", color: "#2bbf63" },
+  { percent: "92%", status: "Өте жоғары", label: "Тастанды", color: "#e84436" },
+  { percent: "52%", status: "Жоғары", label: "Пайдалану", color: "#f5832e" },
+  { percent: "56%", status: "Жоғары", label: "Қабылдамау", color: "#f59552" },
+  { percent: "62%", status: "Жоғары", label: "Сыншыл", color: "#25b9a3" },
+  { percent: "100%", status: "Төмен", label: "Дәрменсіздік", color: "#d94743" },
+  { percent: "64%", status: "Төмен", label: "Бойламайды", color: "#f48b2f" },
+  { percent: "100%", status: "Өте жоғары", label: "Басқаруға еру", color: "#e84436" },
+  { percent: "64%", status: "Төмен", label: "Басқаға еру", color: "#2db6aa" },
+  { percent: "80%", status: "Өте жоғары", label: "Өзін құрбан ету", color: "#d94743" },
+  { percent: "100%", status: "Өте жоғары", label: "Өзін сынау", color: "#e84436" },
+  { percent: "64%", status: "Төмен", label: "Басқаға ренжу", color: "#f48b2f" },
+  { percent: "80%", status: "Өте жоғары", label: "Пессимизм", color: "#d94743" },
+  { percent: "12%", status: "Төмен", label: "Мойындалуды іздеу", color: "#2bbf63" },
+  { percent: "92%", status: "Өте жоғары", label: "Ережелер", color: "#e84436" },
+  { percent: "100%", status: "Өте жоғары", label: "Өзін жою", color: "#e84436" },
+  { percent: "84%", status: "Өте жоғары", label: "Дисциплина жоқтығы", color: "#f5822e" },
+  { percent: "12%", status: "Төмен", label: "Кем сезіну", color: "#2bbf63" },
+  { percent: "52%", status: "Жоғары", label: "Пессимизм", color: "#f5832e" },
+  { percent: "60%", status: "Жоғары", label: "Ережелер", color: "#f48b2f" },
 ];
 
 const ResultsSection = () => {
   return (
-    <section className="relative bg-muted py-14 md:py-20 px-6 lg:px-16 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_10%_20%,rgba(128,0,16,0.05),transparent_28%),radial-gradient(circle_at_85%_25%,rgba(128,0,16,0.05),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(128,0,16,0.05),transparent_30%)]" />
+    <section className="relative bg-white py-14 md:py-20 px-6 lg:px-16 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_10%_20%,rgba(128,0,16,0.04),transparent_28%),radial-gradient(circle_at_85%_25%,rgba(128,0,16,0.05),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(128,0,16,0.05),transparent_30%)]" />
       <div className="relative grid lg:grid-cols-[1fr,360px] gap-8 max-w-6xl mx-auto items-center">
         <div>
           <h2
@@ -52,16 +44,16 @@ const ResultsSection = () => {
               <div
                 key={`${result.label}-${idx}`}
                 className={clsx(
-                  "rounded-2xl p-4 md:p-5 shadow-lg border border-white/40 backdrop-blur-sm text-foreground",
-                  "bg-gradient-to-br",
-                  colorBands[idx % colorBands.length],
+                  "rounded-xl p-4 md:p-5 shadow-lg text-white",
                   "hover:scale-[1.03] transition-transform duration-300",
                 )}
+                style={{ backgroundColor: result.color }}
                 data-animate-on-scroll={`animate-tilt-rise ${idx % 2 === 0 ? "animate-swipe-left-strong" : "animate-swipe-right-strong"}`}
                 data-animate-delay={`${idx * 0.03 + 0.12}s`}
               >
-                <div className="font-display text-3xl md:text-4xl font-bold mb-1">{result.percent}</div>
-                <div className="text-sm md:text-base font-medium leading-tight">{result.label}</div>
+                <div className="font-display text-3xl md:text-4xl font-black leading-none">{result.percent}</div>
+                <div className="text-sm md:text-base font-semibold leading-tight opacity-90">{result.status}</div>
+                <div className="text-sm md:text-base font-medium leading-tight mt-1">{result.label}</div>
               </div>
             ))}
           </div>

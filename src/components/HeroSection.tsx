@@ -66,12 +66,12 @@ const HeroSection = () => {
           </div>
 
           {/* Speaker image */}
-          <div className="relative mt-3 px-6" data-animate-on-scroll="animate-swipe-right-strong">
-            <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-[32px] p-4 shadow-[0_24px_48px_rgba(0,0,0,0.38)]">
+          <div className="relative mt-2 px-5" data-animate-on-scroll="animate-swipe-right-strong">
+            <div className="relative overflow-hidden rounded-[42px]">
               <img
                 src={SPEAKER_IMAGE_URL}
                 alt="Құлан Мектепберген"
-                className="w-full h-[380px] object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                className="w-full h-[470px] object-cover object-center scale-[1.05] drop-shadow-[0_26px_52px_rgba(0,0,0,0.42)]"
                 onError={(event) => {
                   const img = event.currentTarget;
                   if (img.dataset.fallbackApplied === "true") return;
@@ -79,6 +79,7 @@ const HeroSection = () => {
                   img.src = SPEAKER_IMAGE_FALLBACK_URL;
                 }}
               />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
             </div>
           </div>
         </div>
@@ -215,11 +216,11 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
-          <div className="relative max-w-[840px] w-full h-full max-h-[900px] xl:max-h-[960px] px-10 py-8 bg-white/8 border border-white/12 rounded-[52px] backdrop-blur-sm shadow-[0_36px_72px_rgba(0,0,0,0.32)] flex items-center justify-center">
+          <div className="relative max-w-[900px] w-full h-full px-10 py-12 flex items-center justify-center">
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген - тренинг спикері"
-              className="w-full h-full object-cover object-center drop-shadow-[0_26px_56px_rgba(0,0,0,0.36)]"
+              className="w-full h-full max-h-[940px] object-cover object-center scale-[1.06] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;
@@ -227,6 +228,7 @@ const HeroSection = () => {
                 img.src = SPEAKER_IMAGE_FALLBACK_URL;
               }}
             />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
           </div>
         </div>
       </div>

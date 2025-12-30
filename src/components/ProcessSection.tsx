@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 interface ProgramItem {
   title: string;
   description: string;
@@ -30,14 +28,6 @@ const ProcessSection = () => {
         >
           3 күндік тренинг <span className="text-primary">бағдарламасы:</span>
         </h2>
-        <p
-          className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 md:mb-14"
-          data-animate-on-scroll="animate-fade-in"
-          data-animate-delay="0.08s"
-        >
-          Онлайн ZOOM платформасында 3 күн бойы жүреді. Сен өміріңді сырттан емес, іштен өзгертуді бастайсың.
-        </p>
-
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
           {program.map((item, idx) => {
             return (
@@ -48,8 +38,11 @@ const ProcessSection = () => {
                 data-animate-delay={`${idx * 0.12 + 0.1}s`}
               >
                 <div className="p-8 flex flex-col gap-4">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center shadow-inner font-display text-2xl md:text-3xl font-semibold text-white">
-                    {idx + 1 } <span className="text-sm md:text-base">күн</span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center shadow-inner font-display text-2xl md:text-3xl font-semibold text-white">
+                      {idx + 1}
+                    </div>
+                    <span className="text-base md:text-lg font-medium text-white">күн</span>
                   </div>
                   <h3 className="font-display text-lg md:text-xl font-semibold leading-snug text-white">
                     {item.title}

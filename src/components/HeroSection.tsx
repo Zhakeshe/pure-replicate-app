@@ -49,7 +49,7 @@ const HeroSection = () => {
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
               className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
-              style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
+              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
             />
           </div>
 

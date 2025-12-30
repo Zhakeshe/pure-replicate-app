@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import {
-  AUTHENTICITY_LOGO_FILTER,
-  AUTHENTICITY_LOGO_URL,
   SPEAKER_BACKGROUND_URL,
   SPEAKER_IMAGE_URL,
   SPEAKER_IMAGE_FALLBACK_URL,
@@ -26,6 +24,7 @@ const HeroSection = () => {
       <div className="lg:hidden">
         {/* Hero with red background and centered photo */}
         <div
+          className="relative z-10 overflow-hidden pb-6 rounded-b-[42px] shadow-[0_20px_44px_rgba(128,0,0,0.3)]"
           className="relative overflow-hidden pb-3 rounded-b-[36px]"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
@@ -85,7 +84,7 @@ const HeroSection = () => {
         </div>
 
         {/* White content card */}
-        <div className="bg-white px-6 pt-8 pb-10 rounded-t-[28px] -mt-4 shadow-[0_-10px_30px_rgba(0,0,0,0.06)]" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
+        <div className="relative z-0 bg-white px-6 pt-14 pb-10 rounded-t-[28px] -mt-10" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
           <p className="text-primary text-[16px] leading-7 tracking-[0.01em] mb-5">
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
@@ -146,16 +145,6 @@ const HeroSection = () => {
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
-
-          {/* Title */}
-          <h1 className="mb-6" data-animate-on-scroll="animate-fade-in">
-            <img
-              src={AUTHENTICITY_LOGO_URL}
-              alt="Аутентичность логотип"
-              className="h-24 w-auto xl:h-28 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
-              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
-            />
-          </h1>
 
           {/* Description */}
           <p

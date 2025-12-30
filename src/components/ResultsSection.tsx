@@ -69,10 +69,7 @@ const ResultsSection = () => {
               3 күндік тренингте
             </div>
             <p className="text-xl md:text-2xl font-display font-bold text-foreground leading-snug">
-              18 базалық көрсеткіш арқылы ең негізгі себептер анықталады
-            </p>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-              P18 диагностикасының нәтижелері сенің күйің мен сенімдеріңді терең ашып, нақты қай жерден бастау керек екенін көрсетеді.
+             18 бағдарламаның өмірге әсерін талдаймыз және олардың себептерін анықтаймыз
             </p>
             <button className="relative inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-primary/40 hover:scale-[1.02] transition-all duration-200">
               Қатысамын

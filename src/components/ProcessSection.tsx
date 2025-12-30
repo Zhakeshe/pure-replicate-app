@@ -49,7 +49,7 @@ const ProcessSection = () => {
               >
                 <div className="p-8 flex flex-col gap-4">
                   <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center shadow-inner font-display text-2xl md:text-3xl font-semibold text-white">
-                    {idx + 1 күн}
+                    {idx + 1 } күн
                   </div>
                   <h3 className="font-display text-lg md:text-xl font-semibold leading-snug text-white">
                     {item.title}

@@ -83,11 +83,9 @@ const HeroSection = () => {
           <div className="grid grid-cols-2 gap-6 mb-7" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.08s">
             <div className="space-y-2">
               <div className="font-display text-4xl font-bold text-primary">3 күн</div>
-              <div className="text-sm text-muted-foreground leading-5">длительность воркшопа Петра Осипова</div>
             </div>
             <div className="space-y-2">
               <div className="font-display text-4xl font-bold text-primary">30+</div>
-              <div className="text-sm text-muted-foreground leading-5">часов живой работы над твоим делом и состоянием</div>
             </div>
           </div>
 

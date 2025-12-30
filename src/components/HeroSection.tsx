@@ -9,7 +9,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden font-sans bg-white text-primary lg:py-10">
+    <section className="relative overflow-hidden font-sans bg-white text-primary lg:pt-0 lg:pb-10">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}

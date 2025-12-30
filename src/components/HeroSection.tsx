@@ -230,6 +230,7 @@ const HeroSection = () => {
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген - тренинг спикері"
               className="w-full h-full max-h-[960px] object-cover object-bottom scale-[1.08] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+            />
           <div className="relative max-w-[900px] w-full h-full px-10 py-12 flex items-center justify-center">
             <img
               src={SPEAKER_IMAGE_URL}

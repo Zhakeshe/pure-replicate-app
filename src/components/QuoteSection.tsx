@@ -10,8 +10,7 @@ const QuoteSection = () => {
       <div className="max-w-6xl mx-auto relative" data-animate-on-scroll="animate-swipe-up-strong animate-pop-soft">
         <div className="bg-white border border-[#e8e0d1] shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[32px] p-8 md:p-12 lg:p-14">
           <p className="text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
-            Бағдарламаларды көргеннен кейін, басқаша таңдау жасауға мүмкіндік ашылады. Ол таңдау басқа болашағыңа жетелейді. Ол
-            болашақ сені басқа нәтижелерге апарады. Сен өміріңді сырттан емес, іштен өзгертіп бастайсың.
+            Сен өміріңді сырттан емес, іштен өзгертіп бастайсың.
           </p>
 
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 sm:gap-6 lg:gap-8 text-[#2b1b15]">

@@ -9,15 +9,15 @@ const ProcessSection = () => {
   const program: ProgramItem[] = [
     {
       title: "Аутентикалық болмысымызға кедергі келтіретін бағдарламалар қалай қалыптасты?",
-      description: "Бағдарламаларды көргеннен кейін, сенде басқаша таңдау жасауға мүмкіндік ашылады.",
+      description: "",
     },
     {
       title: "Эмоция және реакцияны бақылау, басқаруды үйрену",
       description: "Енді сезімдерің/әрекетің саған қарсы емес - сенің жағыңда болады",
     },
     {
-      title: "Аутентикалық болмысымызға кері әсер етіп тұрған бағдарламалармен жұмыс",
-      description: "Ол таңдау басқа болашаққа жетелейді. Ол болашақ сені басқа нәтижелерге апарады.",
+      title: "Аутентикалық болмысымызға кері әсер етіп тұрған бағдарламалармен ары қарай қалай жұмыс жасаймыз?",
+      description: "",
     },
   ];
 
@@ -54,7 +54,9 @@ const ProcessSection = () => {
                   <h3 className="font-display text-lg md:text-xl font-semibold leading-snug text-white">
                     {item.title}
                   </h3>
-                  <p className="text-sm md:text-base leading-relaxed text-white/90">{item.description}</p>
+                  {item.description && (
+                    <p className="text-sm md:text-base leading-relaxed text-white/90">{item.description}</p>
+                  )}
                 </div>
               </div>
             );

@@ -10,6 +10,8 @@ const QuoteSection = () => {
       <div className="max-w-6xl mx-auto relative" data-animate-on-scroll="animate-swipe-up-strong animate-pop-soft">
         <div className="bg-white border border-[#e8e0d1] shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[32px] p-8 md:p-12 lg:p-14">
           <blockquote className="font-display font-bold text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
+          <p className="font-display font-bold text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
+          <p className="font-display text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
             Бағдарламаларды көргеннен кейін, сенде басқаша таңдау жасауға мүмкіндік ашылады. Ол таңдау басқа болашаққа жетелейді. Ол болашақ сені
             басқа нәтижелерге апарады. Cен өміріңді сырттан емес, іштен өзгертуді бастайсың.
           </blockquote>

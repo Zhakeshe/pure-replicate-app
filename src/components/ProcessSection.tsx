@@ -62,9 +62,6 @@ const ProcessSection = () => {
             );
           })}
         </div>
-
-    
-        </div>
       </div>
     </section>
   );

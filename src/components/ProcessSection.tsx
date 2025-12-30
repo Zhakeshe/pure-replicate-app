@@ -22,7 +22,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-white relative overflow-hidden">
+    <section id="program" className="py-16 md:py-24 px-6 lg:px-16 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <h2
           className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4"

@@ -1,3 +1,4 @@
+import { smoothScrollToSection } from "@/lib/scroll";
 import clsx from "clsx";
 
 const results = [
@@ -71,7 +72,10 @@ const ResultsSection = () => {
             <p className="text-xl md:text-2xl font-display font-bold text-foreground leading-snug">
              18 бағдарламаның өмірге әсерін талдаймыз және олардың себептерін анықтаймыз
             </p>
-            <button className="relative inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-primary/40 hover:scale-[1.02] transition-all duration-200">
+            <button
+              className="relative inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg hover:shadow-primary/40 hover:scale-[1.02] transition-all duration-200"
+              onClick={() => smoothScrollToSection("tariff")}
+            >
               Қатысамын
             </button>
           </div>

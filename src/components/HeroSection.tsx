@@ -87,13 +87,21 @@ const HeroSection = () => {
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
-          <div className="grid grid-cols-1 gap-6 mb-7" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.08s">
+          <div
+            className="grid grid-cols-1 gap-6 mb-7 mt-3"
+            data-animate-on-scroll="animate-rise-bloom"
+            data-animate-delay="0.08s"
+          >
             <div className="space-y-2">
               <div className="font-display text-4xl font-bold text-primary">3 күн</div>
             </div>
           </div>
 
-          <div className="flex gap-3" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.12s">
+          <div
+            className="flex gap-3 mt-2"
+            data-animate-on-scroll="animate-rise-bloom"
+            data-animate-delay="0.12s"
+          >
             <Button
               size="lg"
               className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"
@@ -157,7 +165,7 @@ const HeroSection = () => {
 
           {/* Highlighted duration */}
           <div
-            className="flex gap-20 mb-12"
+            className="flex gap-20 mb-12 mt-6"
             data-animate-on-scroll="animate-rise-bloom"
             data-animate-delay="0.2s"
           >
@@ -170,7 +178,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div
-            className="flex gap-5"
+            className="flex gap-5 mt-4"
             data-animate-on-scroll="animate-rise-bloom"
             data-animate-delay="0.4s"
           >

@@ -50,6 +50,19 @@ const HeroSection = () => {
             </div>
           </div>
 
+          {/* Title */}
+          <div
+            className="relative flex justify-center pt-1"
+            data-animate-on-scroll="animate-rise-bloom"
+          >
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
+              style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
+            />
+          </div>
+
           {/* Speaker image */}
           <div className="relative mt-2 px-5" data-animate-on-scroll="animate-swipe-right-strong">
             <div className="relative overflow-hidden rounded-[42px]">

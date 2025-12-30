@@ -23,7 +23,7 @@ const ProcessSection = () => {
     <section id="program" className="py-16 md:py-24 px-6 lg:px-16 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <h2
-          className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4"
+          className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-8 md:mb-10"
           data-animate-on-scroll="animate-rise-bloom"
         >
           3 күндік тренинг <span className="text-primary">бағдарламасы:</span>
@@ -34,15 +34,15 @@ const ProcessSection = () => {
               <div
                 key={idx}
                 className="relative overflow-hidden rounded-3xl bg-[#a30016] text-white shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-[#d4bdae]"
-                data-animate-on-scroll={`animate-swipe-up-strong animate-tilt-rise`}
+                data-animate-on-scroll="animate-rise-bloom"
                 data-animate-delay={`${idx * 0.12 + 0.1}s`}
               >
-                <div className="p-8 flex flex-col gap-4">
+                <div className="p-8 flex flex-col gap-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center shadow-inner font-display text-2xl md:text-3xl font-semibold text-white">
-                      {idx + 1}
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur flex flex-col items-center justify-center shadow-inner font-display text-2xl md:text-3xl font-semibold text-white leading-none">
+                      <span>{idx + 1}</span>
+                      <span className="text-xs md:text-sm font-medium">күн</span>
                     </div>
-                    <span className="text-base md:text-lg font-medium text-white">күн</span>
                   </div>
                   <h3 className="font-display text-lg md:text-xl font-semibold leading-snug text-white">
                     {item.title}

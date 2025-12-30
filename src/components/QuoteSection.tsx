@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { SPEAKER_IMAGE_FALLBACK_URL, SPEAKER_IMAGE_URL } from "@/lib/constants";
+import { QUOTE_AUTHOR_IMAGE_URL, SPEAKER_IMAGE_FALLBACK_URL } from "@/lib/constants";
 
 const QuoteSection = () => {
-  const [avatarSrc, setAvatarSrc] = useState(SPEAKER_IMAGE_URL);
+  const [avatarSrc, setAvatarSrc] = useState(QUOTE_AUTHOR_IMAGE_URL);
 
   return (
     <section className="py-14 md:py-20 px-6 lg:px-16 bg-white relative overflow-hidden">
@@ -21,7 +21,8 @@ const QuoteSection = () => {
                   src={avatarSrc}
                   onError={() => setAvatarSrc(SPEAKER_IMAGE_FALLBACK_URL)}
                   alt="Құлан Мектеберген"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
+                  style={{ objectPosition: "50% 12%" }}
                   loading="lazy"
                 />
               </div>

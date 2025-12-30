@@ -34,7 +34,7 @@ const QuoteSection = () => {
             </div>
 
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/kulanman?igsh=MWRmdTVzZGR1Y21ubg=="
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#8a0f27] text-white font-semibold shadow-[0_16px_40px_rgba(138,15,39,0.35)] hover:shadow-[0_22px_60px_rgba(138,15,39,0.4)] hover:scale-[1.02] transition-all duration-200"

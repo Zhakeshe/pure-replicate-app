@@ -75,17 +75,9 @@ const HeroSection = () => {
             Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
 
-          <div className="flex items-center gap-2 text-primary font-semibold mb-6" data-animate-on-scroll="animate-swipe-left-strong" data-animate-delay="0.05s">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            <span>психологиялық диагностика</span>
-          </div>
-
-          <div className="grid grid-cols-2 gap-6 mb-7" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.08s">
+          <div className="grid grid-cols-1 gap-6 mb-7" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.08s">
             <div className="space-y-2">
               <div className="font-display text-4xl font-bold text-primary">3 күн</div>
-            </div>
-            <div className="space-y-2">
-              <div className="font-display text-4xl font-bold text-primary">30+</div>
             </div>
           </div>
 

@@ -16,7 +16,7 @@ const participants: Participant[] = [
     Icon: Brain,
   },
   {
-    title: "ақша бітіп қалады деген оймен өмір сүретіндер",
+    title: "Тапқан ақшасы өзінен артылмайтындар\n\nақша бітіп қалады деген оймен өмір сүретіндер",
     Icon: Coins,
   },
   {
@@ -32,7 +32,7 @@ const participants: Participant[] = [
     Icon: Compass,
   },
   {
-    title: "ұялып, ашыла алмайтындар (әлемге, әлеуметтік желілерде)",
+    title: "Өзінің ойын еркін бөлісе алмайтындар\nұялып, ашыла алмайтындар (әлемге, әлеуметтік желілерде)",
     Icon: EyeOff,
   },
   {
@@ -99,7 +99,7 @@ const ParticipantsSection = () => {
                 
                 {/* Text */}
                 <div className="p-4 md:p-5">
-                  <p className="text-foreground text-sm md:text-base font-medium leading-relaxed text-center">
+                  <p className="text-foreground text-sm md:text-base font-medium leading-relaxed text-center whitespace-pre-line">
                     {participant.title}
                   </p>
                 </div>

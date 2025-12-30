@@ -6,8 +6,20 @@ import {
   SPEAKER_IMAGE_URL,
   SPEAKER_IMAGE_FALLBACK_URL,
 } from "@/lib/constants";
+import { smoothScrollToSection } from "@/lib/scroll";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [isProgramScrolling, setIsProgramScrolling] = useState(false);
+
+  const handleScrollTo = (id: string, withAnimation = false) => {
+    smoothScrollToSection(
+      id,
+      withAnimation ? () => setIsProgramScrolling(true) : undefined,
+      withAnimation ? () => setIsProgramScrolling(false) : undefined,
+    );
+  };
+
   return (
     <section className="relative overflow-hidden font-sans bg-white text-primary lg:pt-0 lg:pb-0">
       {/* Mobile Layout */}
@@ -85,14 +97,15 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"
-              onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
+              onClick={() => handleScrollTo("tariff")}
             >
               Қатысамын
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="flex-1 border-primary text-primary font-semibold py-6 rounded-2xl bg-transparent hover:bg-primary/10 hover:scale-[1.01] transition-all"
+              className={`flex-1 border-primary text-primary font-semibold py-6 rounded-2xl bg-transparent hover:bg-primary/10 hover:scale-[1.01] transition-all ${isProgramScrolling ? "animate-bounce" : ""}`}
+              onClick={() => handleScrollTo("program", true)}
             >
               Толығырақ білу
             </Button>
@@ -164,14 +177,15 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground font-semibold px-12 py-8 text-lg rounded-2xl shadow-2xl hover:shadow-[0_30px_60px_rgba(0,0,0,0.22)] transition-all duration-300 hover:scale-[1.02]"
-              onClick={() => window.open('https://l.clck.bar/813189', '_blank')}
+              onClick={() => handleScrollTo("tariff")}
             >
               Қатысамын
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300"
+              className={`border-primary text-primary font-semibold px-12 py-8 text-lg rounded-2xl bg-white hover:bg-primary/10 hover:scale-[1.02] transition-all duration-300 ${isProgramScrolling ? "animate-bounce" : ""}`}
+              onClick={() => handleScrollTo("program", true)}
             >
               Толығырақ білу
             </Button>

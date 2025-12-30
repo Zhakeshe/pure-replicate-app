@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import {
-  AUTHENTICITY_LOGO_FILTER,
-  AUTHENTICITY_LOGO_URL,
   SPEAKER_BACKGROUND_URL,
   SPEAKER_IMAGE_URL,
   SPEAKER_IMAGE_FALLBACK_URL,
@@ -26,7 +24,7 @@ const HeroSection = () => {
       <div className="lg:hidden">
         {/* Hero with red background and centered photo */}
         <div
-          className="relative overflow-hidden pb-3"
+          className="relative overflow-hidden pb-3 rounded-b-[36px]"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -52,32 +50,22 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Title */}
-          <div
-            className="relative flex justify-center pt-1"
-            data-animate-on-scroll="animate-rise-bloom"
-          >
-            <img
-              src={AUTHENTICITY_LOGO_URL}
-              alt="Аутентичность логотип"
-              className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
-              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
-            />
-          </div>
-
           {/* Speaker image */}
-          <div className="relative mt-3 px-6" data-animate-on-scroll="animate-swipe-right-strong">
-            <img
-              src={SPEAKER_IMAGE_URL}
-              alt="Құлан Мектепберген"
-              className="w-full h-[320px] object-contain object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
-              onError={(event) => {
-                const img = event.currentTarget;
-                if (img.dataset.fallbackApplied === "true") return;
-                img.dataset.fallbackApplied = "true";
-                img.src = SPEAKER_IMAGE_FALLBACK_URL;
-              }}
-            />
+          <div className="relative mt-2 px-5" data-animate-on-scroll="animate-swipe-right-strong">
+            <div className="relative overflow-hidden rounded-[42px]">
+              <img
+                src={SPEAKER_IMAGE_URL}
+                alt="Құлан Мектепберген"
+                className="w-full h-[470px] object-cover object-center scale-[1.05] drop-shadow-[0_26px_52px_rgba(0,0,0,0.42)]"
+                onError={(event) => {
+                  const img = event.currentTarget;
+                  if (img.dataset.fallbackApplied === "true") return;
+                  img.dataset.fallbackApplied = "true";
+                  img.src = SPEAKER_IMAGE_FALLBACK_URL;
+                }}
+              />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
+            </div>
           </div>
         </div>
 
@@ -125,7 +113,7 @@ const HeroSection = () => {
         <div className="hidden lg:grid grid-cols-2 items-stretch bg-white text-primary min-h-[900px] xl:min-h-[960px]">
           {/* Left side - Content on tinted background */}
           <div
-            className="flex flex-col justify-center lg:justify-start px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
+            className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-24 bg-white text-primary"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
           {/* Top info bar */}
@@ -143,16 +131,6 @@ const HeroSection = () => {
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
           </div>
-
-          {/* Title */}
-          <h1 className="mb-6" data-animate-on-scroll="animate-fade-in">
-            <img
-              src={AUTHENTICITY_LOGO_URL}
-              alt="Аутентичность логотип"
-              className="h-24 w-auto xl:h-28 drop-shadow-[0_10px_32px_rgba(0,0,0,0.28)]"
-              style={{ filter: AUTHENTICITY_LOGO_FILTER }}
-            />
-          </h1>
 
           {/* Description */}
           <p
@@ -202,7 +180,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-center justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0"
+          className="relative flex items-end justify-center overflow-hidden shadow-2xl min-h-[900px] xl:min-h-[960px] lg:pt-0 lg:pb-0 lg:rounded-bl-[48px] lg:rounded-br-[48px]"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -213,17 +191,20 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.15),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.12),transparent_40%)] animate-gradient-pan" />
-          <img
-            src={SPEAKER_IMAGE_URL}
-            alt="Құлан Мектепберген - тренинг спикері"
-            className="relative max-w-[820px] w-full h-full max-h-[900px] xl:max-h-[960px] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
-            onError={(event) => {
-              const img = event.currentTarget;
-              if (img.dataset.fallbackApplied === "true") return;
-              img.dataset.fallbackApplied = "true";
-              img.src = SPEAKER_IMAGE_FALLBACK_URL;
-            }}
-          />
+          <div className="relative max-w-[900px] w-full h-full px-10 pt-10 pb-0 flex items-end justify-center">
+            <img
+              src={SPEAKER_IMAGE_URL}
+              alt="Құлан Мектепберген - тренинг спикері"
+              className="w-full h-full max-h-[960px] object-cover object-bottom scale-[1.08] drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (img.dataset.fallbackApplied === "true") return;
+                img.dataset.fallbackApplied = "true";
+                img.src = SPEAKER_IMAGE_FALLBACK_URL;
+              }}
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
+          </div>
         </div>
       </div>
     </section>

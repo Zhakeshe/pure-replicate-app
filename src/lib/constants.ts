@@ -11,7 +11,7 @@ export const SPEAKER_IMAGE_URL =
   "https://i.postimg.cc/T1t02HN9/1W6A6693-resized-(1)-no-bg-HD-(carve-photos).png";
 
 export const QUOTE_AUTHOR_IMAGE_URL =
-  "https://i.postimg.cc/T1t02HN9/1W6A6693-resized-(1)-no-bg-HD-(carve-photos).png";
+  "https://optim.tildacdn.ink/tild6335-3135-4739-a464-623634353638/-/resize/160x/-/format/webp/image-removebg-previ.png.webp";
 
 export const SPEAKER_IMAGE_FALLBACK_URL =
   "https://static.tildacdn.com/tild6438-3266-4131-b336-336434313833/Mask_group-min.png";

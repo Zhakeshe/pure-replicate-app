@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="lg:hidden">
         {/* Hero with red background and centered photo */}
         <div
-          className="relative overflow-hidden pb-4"
+          className="relative overflow-hidden pb-3"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -48,17 +48,17 @@ const HeroSection = () => {
             <img
               src={AUTHENTICITY_LOGO_URL}
               alt="Аутентичность логотип"
-              className="h-[76px] w-auto md:h-20 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
+              className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
               style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
             />
           </div>
 
           {/* Speaker image */}
-          <div className="relative mt-4 px-4" data-animate-on-scroll="animate-swipe-right-strong">
+          <div className="relative mt-3 px-6" data-animate-on-scroll="animate-swipe-right-strong">
             <img
               src={SPEAKER_IMAGE_URL}
               alt="Құлан Мектепберген"
-              className="w-full h-[360px] object-cover object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
+              className="w-full h-[320px] object-contain object-top drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
               onError={(event) => {
                 const img = event.currentTarget;
                 if (img.dataset.fallbackApplied === "true") return;
@@ -67,21 +67,31 @@ const HeroSection = () => {
               }}
             />
           </div>
-
-          {/* Copy over the speaker background */}
-          <div className="relative px-6 pt-6 pb-5 text-white space-y-4" data-animate-on-scroll="animate-rise-bloom">
-            <p className="text-[16px] leading-7 tracking-[0.01em]">
-              Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
-            </p>
-            <div className="flex items-center gap-12">
-              <div className="font-display text-4xl font-bold">3 күн</div>
-            </div>
-          </div>
         </div>
 
-        {/* CTA Buttons below the background */}
-        <div className="bg-white px-6 py-8" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
-          <div className="flex gap-3">
+        {/* White content card */}
+        <div className="bg-white px-6 pt-8 pb-10 rounded-t-[28px] -mt-4 shadow-[0_-10px_30px_rgba(0,0,0,0.06)]" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
+          <p className="text-primary text-[16px] leading-7 tracking-[0.01em] mb-5">
+            Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
+          </p>
+
+          <div className="flex items-center gap-2 text-primary font-semibold mb-6" data-animate-on-scroll="animate-swipe-left-strong" data-animate-delay="0.05s">
+            <span className="w-2 h-2 rounded-full bg-primary" />
+            <span>психологиялық диагностика</span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6 mb-7" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.08s">
+            <div className="space-y-2">
+              <div className="font-display text-4xl font-bold text-primary">3 күн</div>
+              <div className="text-sm text-muted-foreground leading-5">длительность воркшопа Петра Осипова</div>
+            </div>
+            <div className="space-y-2">
+              <div className="font-display text-4xl font-bold text-primary">30+</div>
+              <div className="text-sm text-muted-foreground leading-5">часов живой работы над твоим делом и состоянием</div>
+            </div>
+          </div>
+
+          <div className="flex gap-3" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.12s">
             <Button
               size="lg"
               className="flex-1 bg-primary text-primary-foreground font-semibold py-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"

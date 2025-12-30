@@ -25,6 +25,7 @@ const HeroSection = () => {
         {/* Hero with red background and centered photo */}
         <div
           className="relative z-10 overflow-hidden pb-6 rounded-b-[42px] shadow-[0_20px_44px_rgba(128,0,0,0.3)]"
+          className="relative overflow-hidden pb-3 rounded-b-[36px]"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.48) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -48,6 +49,19 @@ const HeroSection = () => {
               <span className="w-1.5 h-1.5 bg-white rounded-full" />
               <span className="font-semibold">онлайн ZOOM</span>
             </div>
+          </div>
+
+          {/* Title */}
+          <div
+            className="relative flex justify-center pt-1"
+            data-animate-on-scroll="animate-rise-bloom"
+          >
+            <img
+              src={AUTHENTICITY_LOGO_URL}
+              alt="Аутентичность логотип"
+              className="h-[82px] w-auto md:h-24 drop-shadow-[0_16px_42px_rgba(0,0,0,0.45)]"
+              style={{ filter: "brightness(0) saturate(100%) invert(100%)" }}
+            />
           </div>
 
           {/* Speaker image */}

@@ -6,7 +6,7 @@ const TariffsSection = () => {
   const [showReceiptCta, setShowReceiptCta] = useState(false);
 
   const tariff = {
-    name: "Өзіңді тануға алғашқы қадам жаса",
+    name: "Өзіңді тануға алғашқы қадам",
     price: "5 000 ₸",
     features: [
       "P18 тестін тапсыру, расшифровкасымен бірге",
@@ -72,7 +72,7 @@ const TariffsSection = () => {
             <Button
               size="lg"
               className="mt-4 w-full bg-green-500 text-white hover:bg-green-600 font-medium py-7 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.open("https://l.clck.bar/813189", "_blank")}
+              onClick={() => window.open("https://l.clck.bar/06335d", "_blank")}
             >
               Чек жіберу
             </Button>

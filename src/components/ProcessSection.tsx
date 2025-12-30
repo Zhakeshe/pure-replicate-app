@@ -22,8 +22,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 lg:px-16 bg-[#f6eed5] relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(128,0,16,0.08),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(128,0,16,0.06),transparent_28%),radial-gradient(circle_at_70%_85%,rgba(128,0,16,0.05),transparent_26%)]" />
+    <section className="py-16 md:py-24 px-6 lg:px-16 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <h2
           className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4"

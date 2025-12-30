@@ -17,14 +17,14 @@ const Footer = () => {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
             data-animate-on-scroll="animate-swipe-left-strong"
           >
-            <span className="bg-primary/80 px-4 py-1">БАҒДАРЛАМА НЕГІЗДЕЛГЕН</span>
+            <span className="bg-primary/80 px-4 py-1">БАҒДАРЛАМА ҒЫЛЫМИ</span>
           </h2>
           <h2
             className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12"
             data-animate-on-scroll="animate-swipe-right-strong"
             data-animate-delay="0.1s"
           >
-            <span className="bg-primary/80 px-4 py-1">ҒЫЛЫМИ ТЕОРИЯЛАР МЕН ИДЕЯЛАРҒА</span>
+            <span className="bg-primary/80 px-4 py-1">ТЕОРИЯЛАР МЕН ИДЕЯЛАРҒА НЕГІЗДЕЛГЕН</span>
           </h2>
 
           {/* Scientists */}

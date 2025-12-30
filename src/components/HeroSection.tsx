@@ -9,7 +9,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden font-sans bg-white text-primary">
+    <section className="relative overflow-hidden font-sans bg-white text-primary lg:py-10">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Hero with red background and photo */}
@@ -103,7 +103,7 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop Layout - 50/50 split */}
-        <div className="hidden lg:grid grid-cols-2 min-h-screen bg-white text-primary">
+        <div className="hidden lg:grid grid-cols-2 items-stretch bg-white text-primary">
           {/* Left side - Content on tinted background */}
           <div
             className="flex flex-col justify-center px-14 xl:px-24 py-16 xl:py-20 bg-white text-primary"
@@ -182,7 +182,7 @@ const HeroSection = () => {
 
         {/* Right side - Speaker Photo on RED background */}
         <div
-          className="relative flex items-end justify-center overflow-hidden shadow-2xl"
+          className="relative flex items-center justify-center overflow-hidden shadow-2xl py-12"
           style={{
             backgroundImage: `linear-gradient(120deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.35) 100%), url(${SPEAKER_BACKGROUND_URL})`,
             backgroundSize: "cover",
@@ -196,7 +196,7 @@ const HeroSection = () => {
           <img
             src={SPEAKER_IMAGE_URL}
             alt="Құлан Мектепберген - тренинг спикері"
-            className="relative w-full h-full object-cover object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] animate-float-soft"
+            className="relative max-w-[820px] w-full h-[720px] max-h-[820px] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)] animate-float-soft"
             onError={(event) => {
               const img = event.currentTarget;
               if (img.dataset.fallbackApplied === "true") return;

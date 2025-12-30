@@ -6,11 +6,9 @@ const QuoteSection = () => {
   const [avatarSrc, setAvatarSrc] = useState(SPEAKER_IMAGE_URL);
 
   return (
-    <section className="py-14 md:py-20 px-6 lg:px-16 bg-[#f7f3dc] relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_20%_30%,rgba(128,0,16,0.08),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(128,0,16,0.06),transparent_30%),radial-gradient(circle_at_50%_85%,rgba(128,0,16,0.05),transparent_30%)]" />
-
+    <section className="py-14 md:py-20 px-6 lg:px-16 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative" data-animate-on-scroll="animate-swipe-up-strong animate-pop-soft">
-        <div className="bg-[#fdfbf0] border border-[#e6d9aa] shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[32px] p-8 md:p-12 lg:p-14">
+        <div className="bg-white border border-[#e8e0d1] shadow-[0_24px_60px_rgba(0,0,0,0.08)] rounded-[32px] p-8 md:p-12 lg:p-14">
           <p className="text-lg md:text-xl lg:text-2xl text-[#2b1b15] leading-relaxed md:leading-[1.75] max-w-4xl">
             Бағдарламаларды көргеннен кейін, басқаша таңдау жасауға мүмкіндік ашылады. Ол таңдау басқа болашағыңа жетелейді. Ол
             болашақ сені басқа нәтижелерге апарады. Сен өміріңді сырттан емес, іштен өзгертіп бастайсың.

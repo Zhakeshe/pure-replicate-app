@@ -16,7 +16,7 @@ const DiagnosticSection = () => {
 
            <div className="space-y-4 text-foreground/80 text-lg md:text-xl leading-relaxed">
              <h3 className="font-semibold text-base md:text-lg">
-               p18 тестімен:
+               p18 тесті:
              </h3>
 
              <ul className="list-decimal list-inside space-y-2 text-base md:text-lg">

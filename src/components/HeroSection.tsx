@@ -87,9 +87,10 @@ const HeroSection = () => {
 
         {/* White content card */}
         <div className="relative z-0 bg-white px-6 pt-14 pb-10 rounded-t-[28px] -mt-10" data-animate-on-scroll="animate-rise-bloom" data-animate-delay="0.05s">
-          <p className="text-primary text-[16px] leading-7 tracking-[0.01em] mb-5">
-            Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
+          <p className="font-semibold text-black text-[13px] uppercase tracking-wide mb-5">
+           Бұл өзіңді өзгерту емес, өзіңе қайта оралу.
           </p>
+
 
           <div
             className="grid grid-cols-1 gap-6 mb-7 mt-3"
